@@ -19,8 +19,7 @@ onMounted(() => {
   } else {
     user.value = {
       name: "Guest",
-      avatar:
-        "https://ui-avatars.com/api/?name=Guest&background=18181b&color=fff&size=40",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
     };
   }
 });
@@ -63,6 +62,7 @@ const logout = () => {
               </svg>
             </button>
             <div class="dropdown-menu">
+              <button @click="router.push('/interviews/get-started')" class="dropdown-item">Techmade | Interviews</button>
               <router-link to="/interviews/questions" class="dropdown-item"
                 >Practice Questions</router-link
               >
@@ -209,6 +209,7 @@ const logout = () => {
   color: #d1d5db;
   text-decoration: none;
   font-weight: 500;
+  font-size: 14px;
   padding: 0.5rem 0;
   display: flex;
   align-items: center;
@@ -235,7 +236,7 @@ const logout = () => {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #111827;
+  background-color: #18181b;
   border: 1px solid #374151;
   border-radius: 6px;
   padding: 0.5rem 0;
@@ -260,10 +261,11 @@ const logout = () => {
   color: #d1d5db;
   text-decoration: none;
   transition: all 0.2s;
+  background: #18181b;
 }
 
 .dropdown-item:hover {
-  background-color: #1f2937;
+  background-color: #2a2a2e;
   color: #ffffff;
 }
 

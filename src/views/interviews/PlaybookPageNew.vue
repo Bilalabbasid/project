@@ -11,7 +11,7 @@
           <div class="container">
             <div class="header-content">
               <h1>Front End Interview Playbook</h1>
-              <p>The definitive guide to front end interviews. From algorithms to system design, we cover everything you need to know to land your dream job.</p>
+              <p>The definitive guide to front end interviews.</p>
 
               <div class="header-features">
                 <div class="feature-item">
@@ -230,7 +230,9 @@
       </div>
     </div>
   </div>
-</template><script setup>
+</template>
+
+<script setup>
 import InterviewSidebar from '../../components/InterviewSidebar.vue'
 
 // No reactive data needed for this static playbook page
@@ -254,29 +256,26 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 
 /* Header Section */
 .playbook-header {
+  background: linear-gradient(135deg, #18181b 0%, #1f2937 100%);
   padding: 80px 0 60px;
   text-align: center;
-  border-bottom: 1px solid #374151;
 }
 
-.header-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.playbook-header h1 {
-  font-size: 3.5rem;
+.header-content h1 {
+  font-size: 3rem;
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 1rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
-.playbook-header p {
+.header-content > p {
   font-size: 1.25rem;
   color: #9ca3af;
   margin-bottom: 3rem;
-  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-features {
@@ -284,13 +283,14 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #d1d5db;
+  color: #dcee77;
   font-weight: 500;
 }
 
@@ -299,37 +299,34 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 }
 
 .header-description {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .header-description p {
   font-size: 1.125rem;
   color: #9ca3af;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* Content Sections */
 .playbook-content {
-  padding: 80px 0;
+  padding: 60px 0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Section Headers */
 .playbook-section {
   margin-bottom: 4rem;
+}
+
+.playbook-section:last-child {
+  margin-bottom: 0;
 }
 
 .section-header {
   margin-bottom: 2rem;
 }
 
-.playbook-section h2 {
+.section-header h2 {
   font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
@@ -348,7 +345,6 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
   font-weight: 600;
 }
 
-/* Articles List */
 .articles-list {
   display: flex;
   flex-direction: column;
@@ -357,12 +353,12 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 
 .article-card {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  align-items: flex-start;
+  gap: 1rem;
   padding: 1.5rem;
   background: #1f2937;
   border: 1px solid #374151;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -370,20 +366,19 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 .article-card:hover {
   border-color: #4b5563;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .article-number {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   background: #dcee77;
   color: #000000;
   border-radius: 50%;
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 0.875rem;
   flex-shrink: 0;
 }
 
@@ -412,7 +407,7 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
   gap: 1rem;
 }
 
-.reading-time {
+.article-meta .reading-time {
   color: #6b7280;
   font-size: 0.75rem;
   font-weight: 500;
@@ -422,11 +417,8 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
   color: #dcee77;
   font-size: 1.25rem;
   font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.article-card:hover .article-arrow {
-  transform: translateX(4px);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
 }
 
 /* Responsive Design */
@@ -435,52 +427,35 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
     padding: 60px 0 40px;
   }
 
-  .playbook-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .playbook-header p {
-    font-size: 1.125rem;
+  .header-content h1 {
+    font-size: 2.25rem;
   }
 
   .header-features {
-    flex-direction: column;
     gap: 1rem;
   }
 
-  .container {
-    padding: 0 1rem;
+  .feature-item {
+    font-size: 0.875rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
   }
 
   .article-card {
     padding: 1rem;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .article-number {
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-  }
-
-  .article-content h3 {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .playbook-header h1 {
-    font-size: 2rem;
-  }
-
-  .article-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
+    align-self: flex-start;
   }
 
   .article-arrow {
-    align-self: center;
+    align-self: flex-end;
+    margin-top: 0;
   }
 }
 </style>

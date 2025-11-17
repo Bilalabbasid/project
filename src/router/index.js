@@ -13,7 +13,17 @@ import AccountPage from "../views/auth/AccountPage.vue";
 // Interview Views
 import InterviewHome from "../views/interviews/InterviewHome.vue";
 import PlaybookPage from "../views/interviews/PlaybookPage.vue";
+import ReactPlaybook from "../views/interviews/ReactPlaybook.vue";
 import PracticeQuestionsPage from "../views/interviews/PracticeQuestionsPage.vue";
+import AllPracticeQuestions from "../views/interviews/AllPracticeQuestions.vue";
+import FrameworksLanguages from "../views/interviews/FrameworksLanguages.vue";
+import QuestionFormats from "../views/interviews/QuestionFormats.vue";
+import GFE75 from "../views/interviews/GFE75.vue";
+import Blind75 from "../views/interviews/Blind75.vue";
+import FrontendSystemDesign from "../views/interviews/FrontendSystemDesign.vue";
+import StudyPlans from "../views/interviews/StudyPlans.vue";
+import CompanyGuides from "../views/interviews/CompanyGuides.vue";
+import FocusAreas from "../views/interviews/FocusAreas.vue";
 
 // Project Views
 import ProjectsHome from "../views/projects/ProjectsHome.vue";
@@ -57,6 +67,16 @@ const routes = [
     component: InterviewHome,
   },
   {
+    path: "/interviews/get-started",
+    name: "InterviewGetStarted",
+    component: InterviewHome, // Using InterviewHome for now, can be changed to a specific component
+  },
+  {
+    path: "/interviews/dashboard",
+    name: "InterviewDashboard",
+    component: InterviewHome, // Using InterviewHome for now, can be changed to a specific dashboard component
+  },
+  {
     path: "/interviews/playbook",
     name: "Playbook",
     component: PlaybookPage,
@@ -64,7 +84,62 @@ const routes = [
   {
     path: "/interviews/questions",
     name: "PracticeQuestions",
-    component: PracticeQuestionsPage,
+    component: AllPracticeQuestions,
+  },
+  {
+    path: "/interviews/questions/frameworks",
+    name: "FrameworksLanguages",
+    component: FrameworksLanguages,
+  },
+  {
+    path: "/interviews/questions/formats",
+    name: "QuestionFormats",
+    component: QuestionFormats,
+  },
+  {
+    path: "/interviews/playbook/gfe75",
+    name: "GFE75",
+    component: GFE75,
+  },
+  {
+    path: "/interviews/playbook/blind75",
+    name: "Blind75",
+    component: Blind75,
+  },
+  {
+    path: "/interviews/playbook/system-design",
+    name: "FrontendSystemDesign",
+    component: FrontendSystemDesign,
+  },
+  {
+    path: "/interviews/playbook/react",
+    name: "ReactPlaybook",
+    component: ReactPlaybook,
+  },
+  {
+    path: "/interviews/playbook/behavioral",
+    name: "BehavioralPlaybook",
+    component: PlaybookPage, // Using PlaybookPage as placeholder
+  },
+  {
+    path: "/interviews/study-plans",
+    name: "StudyPlans",
+    component: StudyPlans,
+  },
+  {
+    path: "/interviews/company",
+    name: "CompanyGuides",
+    component: CompanyGuides,
+  },
+  {
+    path: "/interviews/focus-areas",
+    name: "FocusAreas",
+    component: FocusAreas,
+  },
+  {
+    path: "/interviews/guides",
+    name: "InterviewGuides",
+    component: InterviewHome, // Using InterviewHome for now
   },
   {
     path: "/interviews/questions/:id",

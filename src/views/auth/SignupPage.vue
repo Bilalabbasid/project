@@ -76,13 +76,13 @@ const handleSubmit = () => {
 }
 
 .auth-container {
-  max-width: 450px;
+  max-width: 600px;
   width: 100%;
   padding: 0 20px;
 }
 
 .auth-card {
-  background: #111827;
+  background: #18181b;
   padding: 48px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
@@ -135,8 +135,8 @@ const handleSubmit = () => {
 
 .form-group input:focus {
   outline: none;
-  border-color: #efff94;
-  box-shadow: 0 0 0 3px rgba(239, 255, 148, 0.25);
+  border-color: #18181b;
+  box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.25);
 }
 
 .form-group input::placeholder {
@@ -149,6 +149,15 @@ const handleSubmit = () => {
   font-weight: 600;
   border-radius: 8px;
   margin-top: 8px;
+  background-color: #dcee77;
+  color: #000000;
+  border: 1px solid #374151;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #c4d66a;
 }
 
 .auth-footer {
@@ -162,14 +171,14 @@ const handleSubmit = () => {
 }
 
 .auth-link {
-  color: #efff94;
+  color: #ffffff;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .auth-link:hover {
-  color: #d4e66a;
+  color: #d1d5db;
 }
 
 .terms {

@@ -44,7 +44,7 @@ main {
 }
 
 .btn-primary {
-  background-color: #efff94;
+  background-color: #dcee77;
   color: #000000;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -58,7 +58,7 @@ main {
 }
 
 .btn-primary:hover {
-  background-color: #d4e66a;
+  background-color: #c4d66a;
 }
 
 .btn-secondary {
@@ -83,11 +83,11 @@ main {
 
 /* Green accent color for highlights */
 .text-green {
-  color: #efff94;
+  color: #dcee77;
 }
 
 .bg-green {
-  background-color: #efff94;
+  background-color: #dcee77;
 }
 
 /* Dark theme utilities */
