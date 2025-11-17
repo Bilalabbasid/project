@@ -7,8 +7,8 @@
           <div class="hero-text">
             <h1>Navigate front end interviews with ease</h1>
             <p class="hero-subtitle">
-              Meet the front end interview prep platform built to make your interviews much easier. 
-              By Big Tech ex-interviewers at
+              Meet the front end interview prep platform built to make your
+              interviews much easier. By Big Tech ex-interviewers at
             </p>
             <div class="company-logos">
               <div class="logo-item">Google</div>
@@ -37,8 +37,8 @@
       <div class="container">
         <h2 class="section-title">Question demo</h2>
         <div class="demo-tabs">
-          <button 
-            v-for="tab in demoTabs" 
+          <button
+            v-for="tab in demoTabs"
             :key="tab.id"
             :class="['demo-tab', { active: activeTab === tab.id }]"
             @click="activeTab = tab.id"
@@ -55,10 +55,14 @@
                   <span class="control yellow"></span>
                   <span class="control green"></span>
                 </div>
-                <span class="editor-title">greatfrontend.com</span>
+                <span class="editor-title">techmade.com</span>
               </div>
               <div class="editor-body">
-                <div class="code-line" v-for="(line, idx) in demoCode" :key="idx">
+                <div
+                  class="code-line"
+                  v-for="(line, idx) in demoCode"
+                  :key="idx"
+                >
                   <span class="line-number">{{ idx + 1 }}</span>
                   <span class="code-text" v-html="line"></span>
                 </div>
@@ -74,21 +78,30 @@
       <div class="container">
         <h2 class="section-title">Founder's foreword</h2>
         <p class="section-subtitle">
-          We're crafting GreatFrontEnd with passion, precision and quality.
+          We're crafting Techmade with passion, precision and quality.
         </p>
         <div class="founder-content">
           <div class="founder-quote">
             <blockquote>
-              "Over my career, I have conducted over hundreds of interviews at Meta and have personally received offers from companies like Meta, Google, OpenAI, xAI, Airbnb, Lyft, Dropbox, etc. and I understand the challenges that front end engineers face when preparing for interviews.
-              <br><br>
-              GreatFrontEnd is the culmination of my experience and knowledge in the front end domain to help fellow engineers efficiently and adequately prepare for front end interviews.
-              <br><br>
-              The best part about GreatFrontEnd is that all users emerge as better Front End Engineers after using the platform."
+              "Over my career, I have conducted over hundreds of interviews at
+              Meta and have personally received offers from companies like Meta,
+              Google, OpenAI, xAI, Airbnb, Lyft, Dropbox, etc. and I understand
+              the challenges that front end engineers face when preparing for
+              interviews.
+              <br /><br />
+              Techmade is the culmination of my experience and knowledge in the
+              front end domain to help fellow engineers efficiently and
+              adequately prepare for front end interviews.
+              <br /><br />
+              The best part about Techmade is that all users emerge as better
+              Front End Engineers after using the platform."
             </blockquote>
             <div class="founder-info">
               <div class="founder-name">Yangshun Tay</div>
-              <div class="founder-title">Founder, CEO of GreatFrontEnd</div>
-              <div class="founder-credentials">Ex-Staff Engineer, Meta. Author of Blind 75 and Docusaurus 2</div>
+              <div class="founder-title">Founder, CEO of Techmade</div>
+              <div class="founder-credentials">
+                Ex-Staff Engineer, Meta. Author of Blind 75 and Docusaurus 2
+              </div>
             </div>
           </div>
         </div>
@@ -101,16 +114,28 @@
         <h2 class="section-title">Users success stories</h2>
         <p class="section-subtitle">The offers don't lie</p>
         <p class="section-description">
-          Scores of our users have landed multiple offers at the world's top companies with substantial TC gains. Be the next.
+          Scores of our users have landed multiple offers at the world's top
+          companies with substantial TC gains. Be the next.
         </p>
         <div class="testimonial-card featured">
           <blockquote class="testimonial-text">
-            "When I started interviewing for frontend positions, I found it really hard to find quality content for the interviews whereas backend interviews seemed to have an endless supply of questions ranging from leetcode-style to system design. GreatFrontEnd provides an amazing platform to hone your frontend skills for interviews and beyond. It helped me bridge the gaps in my knowledge of the core fundamentals and provided an awesome framework for system design that really dove into the tradeoffs of the design decisions I choose. GreatFrontEnd was truly a game changer for my interviews skills and I will definitely be coming back to it in the future."
+            "When I started interviewing for frontend positions, I found it
+            really hard to find quality content for the interviews whereas
+            backend interviews seemed to have an endless supply of questions
+            ranging from leetcode-style to system design. Techmade provides an
+            amazing platform to hone your frontend skills for interviews and
+            beyond. It helped me bridge the gaps in my knowledge of the core
+            fundamentals and provided an awesome framework for system design
+            that really dove into the tradeoffs of the design decisions I
+            choose. Techmade was truly a game changer for my interviews skills
+            and I will definitely be coming back to it in the future."
           </blockquote>
           <div class="testimonial-author">
             <div class="author-info">
               <div class="author-name">Yugant Joshi</div>
-              <div class="author-title">Frontend Software Engineer, San Jose, US</div>
+              <div class="author-title">
+                Frontend Software Engineer, San Jose, US
+              </div>
             </div>
           </div>
           <div class="testimonial-stats">
@@ -123,7 +148,7 @@
               <div class="stat-label">Increase in total compensation</div>
             </div>
           </div>
-          <div class="testimonial-note">Received after using GreatFrontEnd</div>
+          <div class="testimonial-note">Received after using Techmade</div>
         </div>
       </div>
     </section>
@@ -132,9 +157,13 @@
     <section class="engineers-section">
       <div class="container">
         <h2 class="section-title">Made by experienced senior engineers</h2>
-        <p class="section-subtitle">Let big tech senior/staff engineers write your prep resources</p>
+        <p class="section-subtitle">
+          Let big tech senior/staff engineers write your prep resources
+        </p>
         <p class="section-description">
-          Having interviewed hundreds of candidates, we know what to look out for. Learn best practices and techniques gleaned from years of experience.
+          Having interviewed hundreds of candidates, we know what to look out
+          for. Learn best practices and techniques gleaned from years of
+          experience.
         </p>
         <div class="credentials-grid">
           <div class="credential-item">
@@ -160,16 +189,18 @@
     <section class="study-plans">
       <div class="container">
         <h2 class="section-title">Study plans and topics</h2>
-        <p class="section-subtitle">A simple yet comprehensive plan to follow</p>
+        <p class="section-subtitle">
+          A simple yet comprehensive plan to follow
+        </p>
         <p class="section-description">
-          Front end interviews are even broader in scope than traditional software engineering interviews. On top of the wide range of front end topics that could be asked, some companies still include standard DSA questions for front end roles. We've condensed everything into a simple strategy you can use to conquer essential interview patterns.
+          Front end interviews are even broader in scope than traditional
+          software engineering interviews. On top of the wide range of front end
+          topics that could be asked, some companies still include standard DSA
+          questions for front end roles. We've condensed everything into a
+          simple strategy you can use to conquer essential interview patterns.
         </p>
         <div class="topics-grid">
-          <div 
-            v-for="topic in topics" 
-            :key="topic.id"
-            class="topic-card"
-          >
+          <div v-for="topic in topics" :key="topic.id" class="topic-card">
             <div class="topic-icon">{{ topic.icon }}</div>
             <h3>{{ topic.name }}</h3>
           </div>
@@ -195,9 +226,12 @@
     <section class="workspace-section">
       <div class="container">
         <h2 class="section-title">Workspace features</h2>
-        <p class="section-subtitle">Practice in an environment that simulates real interviews</p>
+        <p class="section-subtitle">
+          Practice in an environment that simulates real interviews
+        </p>
         <p class="section-description">
-          Our in-browser coding workspace allows you to simulate a real interview environment with no set up required.
+          Our in-browser coding workspace allows you to simulate a real
+          interview environment with no set up required.
         </p>
         <div class="features-grid">
           <div class="feature-item">
@@ -223,9 +257,13 @@
     <section class="question-bank">
       <div class="container">
         <h2 class="section-title">Huge question bank</h2>
-        <p class="section-subtitle">A practice question bank with everything you'd ever need</p>
+        <p class="section-subtitle">
+          A practice question bank with everything you'd ever need
+        </p>
         <p class="section-description">
-          We have questions in every critical topic, interview format and framework / language. Every question comes with solutions and test cases.
+          We have questions in every critical topic, interview format and
+          framework / language. Every question comes with solutions and test
+          cases.
         </p>
         <div class="bank-stats">
           <div class="bank-stat">
@@ -241,19 +279,15 @@
           <div class="filter-group">
             <h3>Topics</h3>
             <div class="filter-tags">
-              <span 
-                v-for="tag in questionTopics" 
-                :key="tag"
-                class="filter-tag"
-              >
+              <span v-for="tag in questionTopics" :key="tag" class="filter-tag">
                 {{ tag }}
               </span>
             </div>
           </div>
         </div>
         <div class="sample-questions">
-          <div 
-            v-for="question in sampleQuestions" 
+          <div
+            v-for="question in sampleQuestions"
             :key="question.id"
             class="question-card"
           >
@@ -275,15 +309,22 @@
     <section class="example-solutions">
       <div class="container">
         <h2 class="section-title">Example solutions</h2>
-        <p class="section-subtitle">Every question answered by ex-interviewers</p>
+        <p class="section-subtitle">
+          Every question answered by ex-interviewers
+        </p>
         <p class="section-description">
-          Referencing good solutions is crucial to learning effectively. We've written our solutions with special care to include practical considerations and multiple approaches.
+          Referencing good solutions is crucial to learning effectively. We've
+          written our solutions with special care to include practical
+          considerations and multiple approaches.
         </p>
         <div class="solutions-tabs">
-          <button 
-            v-for="solution in solutions" 
+          <button
+            v-for="solution in solutions"
             :key="solution.id"
-            :class="['solution-tab', { active: activeSolution === solution.id }]"
+            :class="[
+              'solution-tab',
+              { active: activeSolution === solution.id },
+            ]"
             @click="activeSolution = solution.id"
           >
             {{ solution.name }}
@@ -304,9 +345,12 @@
     <section class="testing-section">
       <div class="container">
         <h2 class="section-title">Automated convenient testing</h2>
-        <p class="section-subtitle">Test your code automatically with a single click</p>
+        <p class="section-subtitle">
+          Test your code automatically with a single click
+        </p>
         <p class="section-description">
-          Polish your answers with a comprehensive test suite that covers all the important edge cases that interviewers will look out for.
+          Polish your answers with a comprehensive test suite that covers all
+          the important edge cases that interviewers will look out for.
         </p>
         <div class="testing-features">
           <div class="testing-feature">
@@ -331,11 +375,13 @@
             <div class="editor-body">
               <div class="code-line">
                 <span class="line-number">1</span>
-                <span class="code-text">export default function makeCounter(initialValue = 0) {</span>
+                <span class="code-text"
+                  >export default function makeCounter(initialValue = 0) {</span
+                >
               </div>
               <div class="code-line">
                 <span class="line-number">2</span>
-                <span class="code-text">  let count =</span>
+                <span class="code-text"> let count =</span>
               </div>
             </div>
             <div class="editor-footer">
@@ -350,18 +396,24 @@
     <section class="company-guides">
       <div class="container">
         <h2 class="section-title">Company guides and tips</h2>
-        <p class="section-subtitle">Leverage insider tips from leading companies</p>
+        <p class="section-subtitle">
+          Leverage insider tips from leading companies
+        </p>
         <p class="section-description">
-          Practicing company-specific questions is the quickest way to ace specific interviews. We regularly survey and update lists for known questions tested in top companies around the world.
+          Practicing company-specific questions is the quickest way to ace
+          specific interviews. We regularly survey and update lists for known
+          questions tested in top companies around the world.
         </p>
         <div class="companies-grid">
-          <div 
-            v-for="company in companies" 
+          <div
+            v-for="company in companies"
             :key="company.id"
             class="company-card"
           >
             <div class="company-logo">{{ company.name }}</div>
-            <div class="company-questions">{{ company.questions }} questions</div>
+            <div class="company-questions">
+              {{ company.questions }} questions
+            </div>
           </div>
         </div>
       </div>
@@ -370,99 +422,113 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
 
-const activeTab = ref('ui')
-const activeSolution = ref('flatten')
+const activeTab = ref("ui");
+const activeSolution = ref("flatten");
 
 const demoTabs = [
-  { id: 'ui', label: 'UI components' },
-  { id: 'js', label: 'JavaScript functions' },
-  { id: 'system', label: 'System design' },
-  { id: 'quiz', label: 'Quiz' }
-]
+  { id: "ui", label: "UI components" },
+  { id: "js", label: "JavaScript functions" },
+  { id: "system", label: "System design" },
+  { id: "quiz", label: "Quiz" },
+];
 
 const demoCode = computed(() => {
-  if (activeTab.value === 'ui') {
+  if (activeTab.value === "ui") {
     return [
       '<span class="keyword">function</span> <span class="function">ContactForm</span>() {',
       '  <span class="keyword">return</span> (',
       '    <span class="tag">&lt;form&gt;</span>',
       '      <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="tag">/&gt;</span>',
       '    <span class="tag">&lt;/form&gt;</span>',
-      '  );',
-      '}'
-    ]
+      "  );",
+      "}",
+    ];
   }
   return [
     '<span class="keyword">function</span> <span class="function">flatten</span>(arr) {',
     '  <span class="keyword">return</span> arr.<span class="function">flat</span>(<span class="number">Infinity</span>);',
-    '}'
-  ]
-})
+    "}",
+  ];
+});
 
 const topics = [
-  { id: 1, name: 'Accessibility', icon: '♿' },
-  { id: 2, name: 'JavaScript Functions', icon: '⚡' },
-  { id: 3, name: 'React', icon: '⚛️' },
-  { id: 4, name: 'Networking', icon: '🌐' },
-  { id: 5, name: 'Data structures & algorithms', icon: '📊' },
-  { id: 6, name: 'Front end system design', icon: '🏗️' },
-  { id: 7, name: 'DOM manipulation', icon: '🖱️' },
-  { id: 8, name: 'Internationalization', icon: '🌍' },
-  { id: 9, name: 'User interfaces', icon: '🎨' },
-  { id: 10, name: 'Performance', icon: '⚡' }
-]
+  { id: 1, name: "Accessibility", icon: "♿" },
+  { id: 2, name: "JavaScript Functions", icon: "⚡" },
+  { id: 3, name: "React", icon: "⚛️" },
+  { id: 4, name: "Networking", icon: "🌐" },
+  { id: 5, name: "Data structures & algorithms", icon: "📊" },
+  { id: 6, name: "Front end system design", icon: "🏗️" },
+  { id: 7, name: "DOM manipulation", icon: "🖱️" },
+  { id: 8, name: "Internationalization", icon: "🌍" },
+  { id: 9, name: "User interfaces", icon: "🎨" },
+  { id: 10, name: "Performance", icon: "⚡" },
+];
 
 const questionTopics = [
-  'Accessibility', 'Async', 'CSS', 'Closure', 'HTML', 'Internationalization',
-  'JavaScript', 'Networking', 'OOP', 'Performance', 'React Hooks', 'Security', 'Web APIs'
-]
+  "Accessibility",
+  "Async",
+  "CSS",
+  "Closure",
+  "HTML",
+  "Internationalization",
+  "JavaScript",
+  "Networking",
+  "OOP",
+  "Performance",
+  "React Hooks",
+  "Security",
+  "Web APIs",
+];
 
 const sampleQuestions = [
   {
     id: 1,
-    title: 'Contact Form',
-    description: 'Build a contact form which submits user feedback and contact details to a back end API',
-    type: 'UI coding',
-    difficulty: 'Easy',
-    frameworks: 'Available frameworks'
+    title: "Contact Form",
+    description:
+      "Build a contact form which submits user feedback and contact details to a back end API",
+    type: "UI coding",
+    difficulty: "Easy",
+    frameworks: "Available frameworks",
   },
   {
     id: 2,
-    title: 'Digital Clock',
-    description: 'Build a 7-segment digital clock that shows the current time',
-    type: 'UI coding',
-    difficulty: 'Medium',
-    frameworks: 'Available frameworks'
+    title: "Digital Clock",
+    description: "Build a 7-segment digital clock that shows the current time",
+    type: "UI coding",
+    difficulty: "Medium",
+    frameworks: "Available frameworks",
   },
   {
     id: 3,
-    title: 'File Explorer',
-    description: 'Build a file explorer component to navigate files and directories in a tree-like hierarchical viewer',
-    type: 'UI coding',
-    difficulty: 'Medium',
-    frameworks: 'Available frameworks'
+    title: "File Explorer",
+    description:
+      "Build a file explorer component to navigate files and directories in a tree-like hierarchical viewer",
+    type: "UI coding",
+    difficulty: "Medium",
+    frameworks: "Available frameworks",
   },
   {
     id: 4,
-    title: 'What are the different ways to visually hide content (and make it available only for screen readers)?',
-    type: 'Quiz',
-    difficulty: 'Medium',
-    frameworks: 'Topics: Accessibility, CSS'
-  }
-]
+    title:
+      "What are the different ways to visually hide content (and make it available only for screen readers)?",
+    type: "Quiz",
+    difficulty: "Medium",
+    frameworks: "Topics: Accessibility, CSS",
+  },
+];
 
 const solutions = [
-  { id: 'flatten', name: 'Flatten' },
-  { id: 'deepClone', name: 'Deep Clone' },
-  { id: 'likeButton', name: 'Like Button' }
-]
+  { id: "flatten", name: "Flatten" },
+  { id: "deepClone", name: "Deep Clone" },
+  { id: "likeButton", name: "Like Button" },
+];
 
 const currentSolution = computed(() => {
   const solutionMap = {
     flatten: {
-      name: 'Flatten',
+      name: "Flatten",
       code: `/**
  * @param {Array<*|Array>} value
  * @return {Array}
@@ -473,10 +539,10 @@ export default function flatten(value) {
       ? flatten(curr) : curr),
     [],
   );
-}`
+}`,
     },
     deepClone: {
-      name: 'Deep Clone',
+      name: "Deep Clone",
       code: `export default function deepClone(value) {
   if (value === null || typeof value !== 'object') {
     return value;
@@ -494,10 +560,10 @@ export default function flatten(value) {
     }
   }
   return cloned;
-}`
+}`,
     },
     likeButton: {
-      name: 'Like Button',
+      name: "Like Button",
       code: `export default function LikeButton() {
   const [liked, setLiked] = useState(false);
   const [count, setCount] = useState(0);
@@ -512,23 +578,23 @@ export default function flatten(value) {
       {liked ? '❤️' : '🤍'} {count}
     </button>
   );
-}`
-    }
-  }
-  return solutionMap[activeSolution.value] || solutionMap.flatten
-})
+}`,
+    },
+  };
+  return solutionMap[activeSolution.value] || solutionMap.flatten;
+});
 
 const companies = [
-  { id: 1, name: 'OpenAI', questions: 15 },
-  { id: 2, name: 'Google', questions: 34 },
-  { id: 3, name: 'Amazon', questions: 61 },
-  { id: 4, name: 'TikTok', questions: 35 },
-  { id: 5, name: 'ByteDance', questions: 27 },
-  { id: 6, name: 'Apple', questions: 13 },
-  { id: 7, name: 'Microsoft', questions: 19 },
-  { id: 8, name: 'Atlassian', questions: 17 },
-  { id: 9, name: 'LinkedIn', questions: 18 }
-]
+  { id: 1, name: "OpenAI", questions: 15 },
+  { id: 2, name: "Google", questions: 34 },
+  { id: 3, name: "Amazon", questions: 61 },
+  { id: 4, name: "TikTok", questions: 35 },
+  { id: 5, name: "ByteDance", questions: 27 },
+  { id: 6, name: "Apple", questions: 13 },
+  { id: 7, name: "Microsoft", questions: 19 },
+  { id: 8, name: "Atlassian", questions: 17 },
+  { id: 9, name: "LinkedIn", questions: 18 },
+];
 </script>
 
 <style scoped>
@@ -717,19 +783,25 @@ const companies = [
   border-radius: 50%;
 }
 
-.control.red { background: #ef4444; }
-.control.yellow { background: #f59e0b; }
-.control.green { background: #10b981; }
+.control.red {
+  background: #ef4444;
+}
+.control.yellow {
+  background: #f59e0b;
+}
+.control.green {
+  background: #10b981;
+}
 
 .editor-title {
   color: #e2e8f0;
   font-size: 14px;
-  font-family: 'SF Mono', Monaco, monospace;
+  font-family: "SF Mono", Monaco, monospace;
 }
 
 .editor-body {
   padding: 20px;
-  font-family: 'SF Mono', Monaco, monospace;
+  font-family: "SF Mono", Monaco, monospace;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -751,12 +823,24 @@ const companies = [
   color: #e2e8f0;
 }
 
-.code-text :deep(.keyword) { color: #c084fc; }
-.code-text :deep(.function) { color: #60a5fa; }
-.code-text :deep(.tag) { color: #f87171; }
-.code-text :deep(.attr) { color: #34d399; }
-.code-text :deep(.string) { color: #fbbf24; }
-.code-text :deep(.number) { color: #60a5fa; }
+.code-text :deep(.keyword) {
+  color: #c084fc;
+}
+.code-text :deep(.function) {
+  color: #60a5fa;
+}
+.code-text :deep(.tag) {
+  color: #f87171;
+}
+.code-text :deep(.attr) {
+  color: #34d399;
+}
+.code-text :deep(.string) {
+  color: #fbbf24;
+}
+.code-text :deep(.number) {
+  color: #60a5fa;
+}
 
 /* Founder Section */
 .founder-section {
@@ -1239,7 +1323,7 @@ const companies = [
 }
 
 .code-block code {
-  font-family: 'SF Mono', Monaco, monospace;
+  font-family: "SF Mono", Monaco, monospace;
   font-size: 14px;
   line-height: 1.6;
   color: #e2e8f0;

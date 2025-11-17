@@ -1,20 +1,191 @@
 <script setup>
-import { ref } from 'vue'
-import CodingDemo from '@/components/CodingDemo.vue'
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import CodingDemo from "@/components/CodingDemo.vue";
+
+let observer = null;
+
+onMounted(() => {
+  setTimeout(() => {
+    const elements = document.querySelectorAll(".animate-on-scroll");
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: "0px",
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  }, 100);
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 
 const stats = ref({
-  questions: '200+',
-  engineers: '1M+',
-  verifiedBy: 'Google Analytics'
-})
+  questions: "200+",
+  engineers: "1M+",
+  verifiedBy: "Google Analytics",
+});
 
-const companyLogos = [
-  { name: 'Google', logo: '🔗' },
-  { name: 'Amazon', logo: '📦' },
-  { name: 'Meta', logo: '👥' },
-  { name: 'Apple', logo: '🍎' },
-  { name: 'Microsoft', logo: '🪟' }
-]
+const activeTab = ref("js");
+const activeSolution = ref("flatten");
+
+const demoTabs = [
+  { id: "ui", label: "UI components" },
+  { id: "js", label: "JavaScript functions" },
+  { id: "system", label: "System design" },
+  { id: "quiz", label: "Quiz" },
+];
+
+const demoCode = computed(() => {
+  if (activeTab.value === "ui") {
+    return [
+      '<span class="keyword">function</span> <span class="function">ContactForm</span>() {',
+      '  <span class="keyword">return</span> (',
+      '    <span class="tag">&lt;form&gt;</span>',
+      '      <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="tag">/&gt;</span>',
+      '    <span class="tag">&lt;/form&gt;</span>',
+      "  );",
+      "}",
+    ];
+  }
+  return [
+    '<span class="keyword">function</span> <span class="function">flatten</span>(arr) {',
+    '  <span class="keyword">return</span> arr.<span class="function">flat</span>(<span class="number">Infinity</span>);',
+    "}",
+  ];
+});
+
+const topics = [
+  { id: 1, name: "Accessibility", icon: "♿" },
+  { id: 2, name: "JavaScript Functions", icon: "⚡" },
+  { id: 3, name: "React", icon: "⚛️" },
+  { id: 4, name: "Networking", icon: "🌐" },
+  { id: 5, name: "Data structures & algorithms", icon: "📊" },
+  { id: 6, name: "Front end system design", icon: "🏗️" },
+  { id: 7, name: "DOM manipulation", icon: "🖱️" },
+  { id: 8, name: "Internationalization", icon: "🌍" },
+  { id: 9, name: "User interfaces", icon: "🎨" },
+  { id: 10, name: "Performance", icon: "⚡" },
+];
+
+const questionTopics = [
+  "Accessibility",
+  "Async",
+  "CSS",
+  "Closure",
+  "HTML",
+  "Internationalization",
+  "JavaScript",
+  "Networking",
+  "OOP",
+  "Performance",
+  "React Hooks",
+  "Security",
+  "Web APIs",
+];
+
+const sampleQuestions = [
+  {
+    id: 1,
+    title: "Contact Form",
+    description:
+      "Build a contact form which submits user feedback and contact details to a back end API",
+    type: "UI coding",
+    difficulty: "Easy",
+    frameworks: "Available frameworks",
+  },
+  {
+    id: 2,
+    title: "Digital Clock",
+    description: "Build a 7-segment digital clock that shows the current time",
+    type: "UI coding",
+    difficulty: "Medium",
+    frameworks: "Available frameworks",
+  },
+  {
+    id: 3,
+    title: "File Explorer",
+    description:
+      "Build a file explorer component to navigate files and directories in a tree-like hierarchical viewer",
+    type: "UI coding",
+    difficulty: "Medium",
+    frameworks: "Available frameworks",
+  },
+];
+
+const solutions = [
+  { id: "flatten", name: "Flatten" },
+  { id: "deepClone", name: "Deep Clone" },
+  { id: "likeButton", name: "Like Button" },
+];
+
+const currentSolution = computed(() => {
+  const solutionMap = {
+    flatten: {
+      name: "Flatten",
+      code: `/**
+ * @param {Array<*|Array>} value
+ * @return {Array}
+ */
+export default function flatten(value) {
+  return value.reduce(
+    (acc, curr) => acc.concat(Array.isArray(curr)
+      ? flatten(curr) : curr),
+    [],
+  );
+}`,
+    },
+    deepClone: {
+      name: "Deep Clone",
+      code: `export default function deepClone(value) {
+  if (value === null || typeof value !== 'object') {
+    return value;
+  }
+  const cloned = {};
+  for (const key in value) {
+    cloned[key] = deepClone(value[key]);
+  }
+  return cloned;
+}`,
+    },
+    likeButton: {
+      name: "Like Button",
+      code: `export default function LikeButton() {
+  const [liked, setLiked] = useState(false);
+  return (
+    <button onClick={() => setLiked(!liked)}>
+      {liked ? '❤️' : '🤍'}
+    </button>
+  );
+}`,
+    },
+  };
+  return solutionMap[activeSolution.value] || solutionMap.flatten;
+});
+
+const companies = [
+  { id: 1, name: "OpenAI", questions: 15 },
+  { id: 2, name: "Google", questions: 34 },
+  { id: 3, name: "Amazon", questions: 61 },
+  { id: 4, name: "TikTok", questions: 35 },
+  { id: 5, name: "ByteDance", questions: 27 },
+  { id: 6, name: "Apple", questions: 13 },
+  { id: 7, name: "Microsoft", questions: 19 },
+  { id: 8, name: "Atlassian", questions: 17 },
+  { id: 9, name: "LinkedIn", questions: 18 },
+];
 </script>
 
 <template>
@@ -23,103 +194,223 @@ const companyLogos = [
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <div class="hero-left">
-            <!-- New Badge -->
-            <div class="new-badge">
-              <span class="badge-text">NEW</span>
-              <span class="badge-link">Advertise with us →</span>
-            </div>
-
-            <!-- Main Headline -->
-            <h1 class="hero-title">
-              Navigate front end<br>
-              interviews with ease
-            </h1>
-
-            <!-- Subtitle -->
+          <div class="hero-left animate-on-scroll">
+            <h1>Navigate front end interviews with ease</h1>
             <p class="hero-subtitle">
-              Meet the <strong>front end interview prep platform</strong> built to make your
-              interviews much easier. By Big Tech ex-interviewers at 
-              <span class="company-badges">
-                <span class="company-badge">Google</span>
-                <span class="company-badge">Amazon</span>
-                <span class="company-badge">Meta</span>
-              </span>
+              Meet the front end interview prep platform built to make your
+              interviews much easier. By Big Tech ex-interviewers at
             </p>
-
-            <!-- CTA Button -->
-            <div class="hero-cta">
-              <router-link to="/signup" class="btn-primary btn-large">
-                Get started now →
-              </router-link>
-              <p class="cta-note">{{ stats.questions }} questions are free to do</p>
+            <div class="company-logos">
+              <div class="logo-item">Google</div>
+              <div class="logo-item">Amazon</div>
+              <div class="logo-item">Meta</div>
             </div>
-
-            <!-- Social Proof -->
-            <div class="social-proof">
-              <div class="avatars">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="User" class="avatar" />
-                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="User" class="avatar" />
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="User" class="avatar" />
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face" alt="User" class="avatar" />
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="User" class="avatar" />
-                <span class="avatar-more">+</span>
-              </div>
-              <div class="proof-text">
-                <strong>{{ stats.engineers }} engineers already on board</strong>
-                <div class="verification">
-                  <span class="verification-icon">📊</span>
-                  <span>Verifiable by {{ stats.verifiedBy }}</span>
-                </div>
+            <div class="hero-cta">
+              <router-link to="/signup" class="btn btn-primary">
+                Get started now
+              </router-link>
+              <p class="cta-note">
+                {{ stats.questions }} questions are free to do
+              </p>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">{{ stats.engineers }}</span>
+                <span class="stat-label">engineers already on board</span>
               </div>
             </div>
           </div>
 
-          <div class="hero-right">
+          <div class="hero-right animate-on-scroll">
             <CodingDemo />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
+    <!-- Question Demo Section -->
+    <section class="question-demo animate-on-scroll">
       <div class="container">
-        <div class="about-content">
-          <div class="about-header">
-            <div class="section-badges">
-              <span class="section-badge">UI components</span>
-              <span class="section-badge active">JavaScript functions</span>
-              <span class="section-badge">System design</span>
-              <span class="section-badge">Quiz</span>
+        <h2 class="section-title">Question demo</h2>
+        <div class="demo-tabs">
+          <button
+            v-for="tab in demoTabs"
+            :key="tab.id"
+            :class="['demo-tab', { active: activeTab === tab.id }]"
+            @click="activeTab = tab.id"
+          >
+            {{ tab.label }}
+          </button>
+        </div>
+        <div class="demo-content">
+          <div class="code-editor">
+            <div class="editor-header">
+              <div class="editor-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <span class="editor-title">techmade.com</span>
+            </div>
+            <div class="editor-body">
+              <div class="code-line" v-for="(line, idx) in demoCode" :key="idx">
+                <span class="line-number">{{ idx + 1 }}</span>
+                <span class="code-text" v-html="line"></span>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <h2 class="about-title">
-            We're crafting GreatFrontEnd with passion,<br>
-            precision and quality.
-          </h2>
-
-          <div class="testimonial">
-            <div class="testimonial-content">
-              <p class="testimonial-quote">
-                "Over my career, I have conducted over hundreds of interviews at Meta and have personally received offers from companies like Meta, Google, OpenAI, xAI, Airbnb, Lyft, Dropbox, etc. and I understand the challenges that front end engineers face when preparing for interviews.
-              </p>
-              <p class="testimonial-quote">
-                GreatFrontEnd is the culmination of my experience and knowledge in the front end domain to help fellow engineers efficiently and adequately prepare for front end interviews.
-              </p>
-              <p class="testimonial-quote">
-                The best part about GreatFrontEnd is that all users emerge as better Front End Engineers after using the platform."
-              </p>
-            </div>
-            
-            <div class="testimonial-author">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Yangshun Tay" class="author-avatar" />
-              <div class="author-info">
-                <div class="author-name">Yangshun Tay</div>
-                <div class="author-title">Founder, CEO of GreatFrontEnd</div>
-                <div class="author-subtitle">Ex-Staff Engineer, Meta. Author of Blind 75 and Docusaurus 2</div>
+    <!-- Founder's Foreword -->
+    <section class="founder-section animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Founder's foreword</h2>
+        <p class="section-subtitle">
+          We're crafting Techmade with passion, precision and quality.
+        </p>
+        <div class="founder-content">
+          <div class="founder-quote">
+            <blockquote>
+              "Over my career, I have conducted over hundreds of interviews at
+              Meta and have personally received offers from companies like Meta,
+              Google, OpenAI, xAI, Airbnb, Lyft, Dropbox, etc. and I understand
+              the challenges that front end engineers face when preparing for
+              interviews.
+              <br /><br />
+              Techmade is the culmination of my experience and knowledge in the
+              front end domain to help fellow engineers efficiently and
+              adequately prepare for front end interviews.
+              <br /><br />
+              The best part about Techmade is that all users emerge as better
+              Front End Engineers after using the platform."
+            </blockquote>
+            <div class="founder-info">
+              <div class="founder-name">Yangshun Tay</div>
+              <div class="founder-title">Founder, CEO of Techmade</div>
+              <div class="founder-credentials">
+                Ex-Staff Engineer, Meta. Author of Blind 75 and Docusaurus 2
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Study Plans and Topics -->
+    <section class="study-plans animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Study plans and topics</h2>
+        <p class="section-subtitle">
+          A simple yet comprehensive plan to follow
+        </p>
+        <div class="topics-grid">
+          <div v-for="topic in topics" :key="topic.id" class="topic-card">
+            <div class="topic-icon">{{ topic.icon }}</div>
+            <h3>{{ topic.name }}</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Question Bank -->
+    <section class="question-bank animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Huge question bank</h2>
+        <p class="section-subtitle">
+          A practice question bank with everything you'd ever need
+        </p>
+        <div class="bank-stats">
+          <div class="bank-stat">
+            <div class="stat-number">2424</div>
+            <div class="stat-label">questions</div>
+          </div>
+          <div class="bank-stat">
+            <div class="stat-number">99</div>
+            <div class="stat-label">hours total</div>
+          </div>
+        </div>
+        <div class="question-filters">
+          <div class="filter-group">
+            <h3>Topics</h3>
+            <div class="filter-tags">
+              <span
+                v-for="tag in questionTopics"
+                :key="tag"
+                class="filter-tag"
+                >{{ tag }}</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="sample-questions">
+          <div
+            v-for="question in sampleQuestions"
+            :key="question.id"
+            class="question-card"
+          >
+            <div class="question-header">
+              <h3>{{ question.title }}</h3>
+              <span class="question-type">{{ question.type }}</span>
+            </div>
+            <p class="question-description">{{ question.description }}</p>
+            <div class="question-meta">
+              <span class="question-difficulty">{{ question.difficulty }}</span>
+              <span class="question-frameworks">{{ question.frameworks }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example Solutions -->
+    <section class="example-solutions animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Example solutions</h2>
+        <p class="section-subtitle">
+          Every question answered by ex-interviewers
+        </p>
+        <div class="solutions-tabs">
+          <button
+            v-for="solution in solutions"
+            :key="solution.id"
+            :class="[
+              'solution-tab',
+              { active: activeSolution === solution.id },
+            ]"
+            @click="activeSolution = solution.id"
+          >
+            {{ solution.name }}
+          </button>
+        </div>
+        <div class="solution-content">
+          <div class="code-block">
+            <div class="code-header">
+              <span class="code-title">{{ currentSolution.name }}</span>
+            </div>
+            <pre><code>{{ currentSolution.code }}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Guides -->
+    <section class="company-guides animate-on-scroll">
+      <div class="container">
+        <h2 class="section-title">Company guides and tips</h2>
+        <p class="section-subtitle">
+          Leverage insider tips from leading companies
+        </p>
+        <div class="companies-grid">
+          <div
+            v-for="company in companies"
+            :key="company.id"
+            class="company-card"
+          >
+            <div class="company-logo">{{ company.name }}</div>
+            <div class="company-questions">
+              {{ company.questions }} questions
             </div>
           </div>
         </div>
@@ -130,13 +421,33 @@ const companyLogos = [
 
 <style scoped>
 .landing-page {
-  background-color: #0a0a0a;
+  background: #18181b;
   color: #ffffff;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
 .hero {
-  padding: 4rem 0 6rem;
-  background: linear-gradient(135deg, #0a0a0a 0%, #111827 100%);
+  background: #18181b;
+  padding: 120px 0 80px;
+  border-bottom: 1px solid #1f2937;
 }
 
 .hero-content {
@@ -146,247 +457,573 @@ const companyLogos = [
   align-items: center;
 }
 
-.hero-left {
-  max-width: 600px;
-}
-
-.new-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(45deg, #22c55e, #16a34a);
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
-}
-
-.badge-text {
-  color: #000;
-  font-weight: 700;
-}
-
-.badge-link {
-  color: #000;
-  text-decoration: none;
-}
-
-.hero-title {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, #d1d5db 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero-left h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
 }
 
 .hero-subtitle {
-  font-size: 1.125rem;
+  font-size: 20px;
   line-height: 1.6;
+  margin-bottom: 32px;
   color: #d1d5db;
-  margin-bottom: 2rem;
 }
 
-.company-badges {
-  display: inline-flex;
-  gap: 0.5rem;
-  margin-left: 0.5rem;
+.company-logos {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
-.company-badge {
-  background: #374151;
-  color: #ffffff;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  font-weight: 500;
+.logo-item {
+  font-size: 18px;
+  font-weight: 600;
+  color: #9ca3af;
 }
 
 .hero-cta {
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
 }
 
-.btn-large {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
+.btn {
   display: inline-block;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: #efff94;
+  color: #000000;
+}
+
+.btn-primary:hover {
+  background: #d4e66a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(239, 255, 148, 0.3);
 }
 
 .cta-note {
+  margin-top: 12px;
+  font-size: 14px;
   color: #9ca3af;
-  font-size: 0.875rem;
-  margin: 0;
 }
 
-.social-proof {
+.hero-stats {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  gap: 48px;
 }
 
-.avatars {
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Question Demo Section */
+.question-demo {
+  padding: 80px 0;
+  background: #18181b;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.demo-tabs {
   display: flex;
-  align-items: center;
-}
-
-.avatar {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  border: 2px solid #0a0a0a;
-  margin-left: -0.5rem;
-}
-
-.avatar:first-child {
-  margin-left: 0;
-}
-
-.avatar-more {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: #374151;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  color: #ffffff;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.demo-tab {
+  padding: 12px 24px;
+  border: 2px solid #374151;
+  background: #111827;
+  border-radius: 8px;
   font-weight: 600;
-  margin-left: -0.5rem;
-  border: 2px solid #0a0a0a;
-}
-
-.proof-text {
+  cursor: pointer;
+  transition: all 0.3s ease;
   color: #d1d5db;
-  font-size: 0.875rem;
 }
 
-.verification {
+.demo-tab:hover {
+  border-color: #efff94;
+  color: #efff94;
+}
+
+.demo-tab.active {
+  background: #efff94;
+  color: #000000;
+  border-color: #efff94;
+}
+
+.demo-content {
+  background: #111827;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
+}
+
+.code-editor {
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.editor-header {
+  background: #334155;
+  padding: 12px 16px;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
-  color: #9ca3af;
-  margin-top: 0.25rem;
+  justify-content: space-between;
 }
 
-.hero-right {
+.editor-controls {
   display: flex;
-  justify-content: center;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.control.red {
+  background: #ef4444;
+}
+.control.yellow {
+  background: #f59e0b;
+}
+.control.green {
+  background: #10b981;
+}
+
+.editor-title {
+  color: #e2e8f0;
+  font-size: 14px;
+  font-family: "SF Mono", Monaco, monospace;
+}
+
+.editor-body {
+  padding: 20px;
+  font-family: "SF Mono", Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.code-line {
+  display: flex;
   align-items: center;
+  margin-bottom: 8px;
 }
 
-.about-section {
-  padding: 4rem 0;
-  background-color: #111827;
+.line-number {
+  color: #64748b;
+  margin-right: 16px;
+  user-select: none;
+  min-width: 24px;
 }
 
-.about-header {
+.code-text {
+  color: #e2e8f0;
+}
+
+.code-text :deep(.keyword) {
+  color: #c084fc;
+}
+.code-text :deep(.function) {
+  color: #60a5fa;
+}
+.code-text :deep(.tag) {
+  color: #f87171;
+}
+.code-text :deep(.attr) {
+  color: #34d399;
+}
+.code-text :deep(.string) {
+  color: #fbbf24;
+}
+.code-text :deep(.number) {
+  color: #60a5fa;
+}
+
+/* Founder Section */
+.founder-section {
+  padding: 80px 0;
+  background: #18181b;
+}
+
+.section-subtitle {
+  font-size: 24px;
   text-align: center;
-  margin-bottom: 3rem;
-}
-
-.section-badges {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.section-badge {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  background: #374151;
+  margin-bottom: 48px;
   color: #d1d5db;
-  transition: all 0.2s;
 }
 
-.section-badge.active {
-  background: #22c55e;
-  color: #000;
-}
-
-.about-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 3rem;
-  background: linear-gradient(135deg, #ffffff 0%, #d1d5db 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.testimonial {
-  max-width: 800px;
+.founder-content {
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.testimonial-quote {
-  font-size: 1.125rem;
-  line-height: 1.7;
+.founder-quote {
+  background: #111827;
+  padding: 48px;
+  border-radius: 16px;
+  border-left: 4px solid #efff94;
+  border: 1px solid #374151;
+}
+
+.founder-quote blockquote {
+  font-size: 18px;
+  line-height: 1.8;
   color: #d1d5db;
-  margin-bottom: 1.5rem;
+  margin-bottom: 32px;
   font-style: italic;
 }
 
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.author-avatar {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-}
-
-.author-name {
-  font-size: 1.125rem;
+.founder-name {
+  font-size: 20px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 0.25rem;
+  margin-bottom: 4px;
 }
 
-.author-title {
-  color: #22c55e;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+.founder-title {
+  font-size: 16px;
+  color: #d1d5db;
+  margin-bottom: 4px;
 }
 
-.author-subtitle {
+.founder-credentials {
+  font-size: 14px;
   color: #9ca3af;
-  font-size: 0.875rem;
 }
 
+/* Study Plans */
+.study-plans {
+  padding: 80px 0;
+  background: #18181b;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.topic-card {
+  background: #111827;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  border: 1px solid #374151;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+  border-color: #efff94;
+}
+
+.topic-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.topic-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Question Bank */
+.question-bank {
+  padding: 80px 0;
+  background: #18181b;
+}
+
+.bank-stats {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-bottom: 48px;
+}
+
+.bank-stat .stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #efff94;
+  margin-bottom: 8px;
+}
+
+.bank-stat .stat-label {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+.question-filters {
+  margin-bottom: 48px;
+}
+
+.filter-group h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-tag {
+  padding: 8px 16px;
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-tag:hover {
+  border-color: #efff94;
+  color: #efff94;
+}
+
+.sample-questions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.question-card {
+  background: #111827;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  border: 1px solid #374151;
+}
+
+.question-card:hover {
+  transform: translateY(-4px);
+  border-color: #efff94;
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.question-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  flex: 1;
+}
+
+.question-type {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #374151;
+  border-radius: 4px;
+  color: #9ca3af;
+}
+
+.question-description {
+  color: #9ca3af;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.question-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+}
+
+.question-difficulty {
+  padding: 4px 8px;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 4px;
+}
+
+.question-frameworks {
+  color: #9ca3af;
+}
+
+/* Example Solutions */
+.example-solutions {
+  padding: 80px 0;
+  background: #18181b;
+}
+
+.solutions-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.solution-tab {
+  padding: 12px 24px;
+  border: 2px solid #374151;
+  background: #111827;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #d1d5db;
+}
+
+.solution-tab:hover {
+  border-color: #efff94;
+  color: #efff94;
+}
+
+.solution-tab.active {
+  background: #efff94;
+  color: #000000;
+  border-color: #efff94;
+}
+
+.solution-content {
+  background: #111827;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #374151;
+}
+
+.code-block {
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.code-header {
+  background: #334155;
+  padding: 12px 16px;
+}
+
+.code-title {
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: "SF Mono", Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Company Guides */
+.company-guides {
+  padding: 80px 0;
+  background: #18181b;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.company-card {
+  background: #111827;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #374151;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-color: #efff94;
+}
+
+.company-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.company-questions {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hero-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
-  .hero-title {
-    font-size: 2.5rem;
+
+  .hero-left h1 {
+    font-size: 36px;
   }
-  
-  .section-badges {
-    flex-wrap: wrap;
+
+  .section-title {
+    font-size: 32px;
   }
-  
-  .about-title {
-    font-size: 2rem;
-  }
-  
-  .testimonial-author {
+
+  .hero-stats {
     flex-direction: column;
-    text-align: center;
+    gap: 24px;
+  }
+
+  .topics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .companies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 }
 </style>

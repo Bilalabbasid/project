@@ -3,18 +3,28 @@
     <div class="questions-header">
       <div class="container">
         <h1>Practice Questions</h1>
-        <p>Sharpen your skills with our collection of real-world interview questions.</p>
+        <p>
+          Sharpen your skills with our collection of real-world interview
+          questions.
+        </p>
       </div>
     </div>
-    
+
     <div class="container">
       <div class="questions-content">
         <div class="questions-list">
-          <div v-for="question in questions" :key="question.id" class="question-card">
+          <div
+            v-for="question in questions"
+            :key="question.id"
+            class="question-card"
+          >
             <div class="question-info">
               <h3>{{ question.title }}</h3>
               <div class="question-meta">
-                <span class="difficulty-badge" :class="`difficulty-${question.difficulty.toLowerCase()}`">
+                <span
+                  class="difficulty-badge"
+                  :class="`difficulty-${question.difficulty.toLowerCase()}`"
+                >
                   {{ question.difficulty }}
                 </span>
                 <span v-if="question.isPremium" class="premium-badge">
@@ -22,7 +32,10 @@
                 </span>
               </div>
             </div>
-            <router-link :to="`/interviews/questions/${question.id}`" class="btn btn-outline">
+            <router-link
+              :to="`/interviews/questions/${question.id}`"
+              class="btn btn-outline"
+            >
               View Question
             </router-link>
           </div>
@@ -33,40 +46,82 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 const questions = ref([
   {
-    id: 'todo-list',
-    title: 'Todo List',
-    difficulty: 'Easy',
-    isPremium: false
+    id: "todo-list",
+    title: "Todo List",
+    difficulty: "Easy",
+    isPremium: false,
   },
   {
-    id: 'debounce-hook',
-    title: 'useDebounce Hook',
-    difficulty: 'Medium',
-    isPremium: true
+    id: "debounce-hook",
+    title: "useDebounce Hook",
+    difficulty: "Medium",
+    isPremium: true,
   },
   {
-    id: 'typeahead',
-    title: 'Typeahead Component',
-    difficulty: 'Hard',
-    isPremium: true
+    id: "typeahead",
+    title: "Typeahead Component",
+    difficulty: "Hard",
+    isPremium: true,
   },
   {
-    id: 'star-rating',
-    title: 'Star Rating Component',
-    difficulty: 'Easy',
-    isPremium: false
+    id: "star-rating",
+    title: "Star Rating Component",
+    difficulty: "Easy",
+    isPremium: false,
   },
   {
-    id: 'virtualized-list',
-    title: 'Virtualized List',
-    difficulty: 'Hard',
-    isPremium: true
-  }
-])
+    id: "virtualized-list",
+    title: "Virtualized List",
+    difficulty: "Hard",
+    isPremium: true,
+  },
+  {
+    id: "accordion",
+    title: "Accordion Component",
+    difficulty: "Easy",
+    isPremium: false,
+  },
+  {
+    id: "modal",
+    title: "Modal Component",
+    difficulty: "Medium",
+    isPremium: false,
+  },
+  {
+    id: "tabs",
+    title: "Tabs Component",
+    difficulty: "Easy",
+    isPremium: false,
+  },
+  {
+    id: "progress-bar",
+    title: "Progress Bar Component",
+    difficulty: "Medium",
+    isPremium: false,
+  },
+  {
+    id: "image-carousel",
+    title: "Image Carousel",
+    difficulty: "Medium",
+    isPremium: true,
+  },
+  {
+    id: "form-validation",
+    title: "Form Validation",
+    difficulty: "Medium",
+    isPremium: false,
+  },
+  {
+    id: "counter",
+    title: "Counter Component",
+    difficulty: "Easy",
+    isPremium: false,
+  },
+]);
 </script>
 
 <style scoped>
@@ -175,7 +230,7 @@ const questions = ref([
   .questions-header h1 {
     font-size: 36px;
   }
-  
+
   .question-card {
     flex-direction: column;
     align-items: flex-start;
