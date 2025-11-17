@@ -19,7 +19,8 @@ onMounted(() => {
   } else {
     user.value = {
       name: "Guest",
-      avatar: "https://ui-avatars.com/api/?name=Guest&background=18181b&color=fff&size=40",
+      avatar:
+        "https://ui-avatars.com/api/?name=Guest&background=18181b&color=fff&size=40",
     };
   }
 });
@@ -94,13 +95,21 @@ const logout = () => {
             </button>
             <div class="user-dropdown">
               <template v-if="isLoggedIn">
-                <router-link to="/account" class="dropdown-item">My Account</router-link>
+                <router-link to="/account" class="dropdown-item"
+                  >My Account</router-link
+                >
                 <button @click="logout" class="dropdown-item">Logout</button>
               </template>
               <template v-else>
-                <router-link to="/login" class="dropdown-item">Sign In</router-link>
-                <router-link to="/signup" class="dropdown-item">Sign Up</router-link>
-                <router-link to="/login" class="dropdown-item">Login</router-link>
+                <router-link to="/login" class="dropdown-item"
+                  >Sign In</router-link
+                >
+                <router-link to="/signup" class="dropdown-item"
+                  >Sign Up</router-link
+                >
+                <router-link to="/login" class="dropdown-item"
+                  >Login</router-link
+                >
               </template>
             </div>
           </div>
