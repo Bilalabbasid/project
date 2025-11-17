@@ -88,7 +88,7 @@ onMounted(async () => {
 <style scoped>
 .account-page {
   padding: 80px 0;
-  background: #f8fafc;
+  background: #18181b;
   min-height: calc(100vh - 144px);
 }
 
@@ -100,13 +100,13 @@ onMounted(async () => {
 .account-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .account-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -120,26 +120,27 @@ onMounted(async () => {
 }
 
 .account-card {
-  background: white;
+  background: #111827;
   border-radius: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  border: 1px solid #374151;
 }
 
 .card-header {
   padding: 24px 32px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .card-header h2 {
   font-size: 24px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 4px;
 }
 
 .card-header p {
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .card-body {
@@ -163,18 +164,18 @@ onMounted(async () => {
 
 .info-label {
   font-size: 14px;
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 4px;
 }
 
 .info-value {
   font-size: 16px;
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .status-active {
-  color: #10b981;
+  color: #efff94;
   text-transform: capitalize;
 }
 

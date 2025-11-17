@@ -168,13 +168,13 @@
 .pricing-header h2 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .pricing-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -188,8 +188,8 @@
 }
 
 .pricing-card {
-  background: white;
-  border: 2px solid #e5e7eb;
+  background: #111827;
+  border: 2px solid #374151;
   border-radius: 16px;
   padding: 32px;
   position: relative;
@@ -198,11 +198,12 @@
 
 .pricing-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #efff94;
 }
 
 .pricing-card.featured {
-  border-color: #007bff;
+  border-color: #efff94;
   transform: scale(1.05);
 }
 
@@ -215,8 +216,8 @@
   top: -12px;
   left: 50%;
   transform: translateX(-50%);
-  background: #007bff;
-  color: white;
+  background: #efff94;
+  color: #000000;
   padding: 8px 24px;
   border-radius: 20px;
   font-size: 14px;
@@ -232,7 +233,7 @@
 .plan-header h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
@@ -246,23 +247,23 @@
 
 .currency {
   font-size: 24px;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .amount {
   font-size: 56px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .period {
   font-size: 18px;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .savings {
-  background: #10b981;
-  color: white;
+  background: #efff94;
+  color: #000000;
   padding: 4px 12px;
   border-radius: 12px;
   font-size: 14px;
@@ -280,13 +281,13 @@
   align-items: center;
   gap: 12px;
   padding: 12px 0;
-  color: #4b5563;
+  color: #d1d5db;
 }
 
 .check-icon {
   width: 20px;
   height: 20px;
-  color: #10b981;
+  color: #efff94;
   flex-shrink: 0;
 }
 
@@ -299,12 +300,12 @@
 }
 
 .featured-button {
-  background: #007bff;
-  color: white;
+  background: #efff94;
+  color: #000000;
 }
 
 .featured-button:hover {
-  background: #0056b3;
+  background: #d4e66a;
 }
 
 .pricing-footer {
@@ -313,7 +314,7 @@
 }
 
 .pricing-footer p {
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 8px;
 }
 

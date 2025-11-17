@@ -71,7 +71,7 @@ const handleSubmit = () => {
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 144px); /* Adjust for nav and footer height */
-  background: #f8fafc;
+  background: #18181b;
   padding: 40px 0;
 }
 
@@ -82,10 +82,11 @@ const handleSubmit = () => {
 }
 
 .auth-card {
-  background: white;
+  background: #111827;
   padding: 48px;
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
 }
 
 .auth-header {
@@ -96,12 +97,12 @@ const handleSubmit = () => {
 .auth-header h2 {
   font-size: 32px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .auth-header p {
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 16px;
 }
 
@@ -118,22 +119,28 @@ const handleSubmit = () => {
 
 .form-group label {
   font-weight: 600;
-  color: #374151;
+  color: #d1d5db;
   margin-bottom: 8px;
 }
 
 .form-group input {
   padding: 12px 16px;
-  border: 1px solid #d1d5db;
+  border: 1px solid #374151;
   border-radius: 8px;
   font-size: 16px;
+  background: #1f2937;
+  color: #ffffff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  border-color: #efff94;
+  box-shadow: 0 0 0 3px rgba(239, 255, 148, 0.25);
+}
+
+.form-group input::placeholder {
+  color: #6b7280;
 }
 
 .auth-button {
@@ -147,7 +154,7 @@ const handleSubmit = () => {
 .auth-footer {
   text-align: center;
   margin-top: 24px;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .auth-footer p {
@@ -155,14 +162,14 @@ const handleSubmit = () => {
 }
 
 .auth-link {
-  color: #007bff;
+  color: #efff94;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .auth-link:hover {
-  color: #0056b3;
+  color: #d4e66a;
 }
 
 .terms {

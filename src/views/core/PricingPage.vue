@@ -150,12 +150,13 @@ const features = ref([
 <style scoped>
 .pricing-page {
   min-height: 100vh;
+  background: #18181b;
 }
 
 /* Hero Section */
 .pricing-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #18181b;
+  color: #ffffff;
   padding: 120px 0 80px;
   text-align: center;
 }
@@ -170,19 +171,19 @@ const features = ref([
   font-size: 20px;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0.9;
+  color: #d1d5db;
   line-height: 1.6;
 }
 
 /* Main Pricing Section */
 .pricing-main {
-  background: white;
+  background: #18181b;
 }
 
 /* FAQ Section */
 .faq-section {
   padding: 120px 0;
-  background: #f8fafc;
+  background: #18181b;
 }
 
 .section-header {
@@ -193,13 +194,13 @@ const features = ref([
 .section-header h2 {
   font-size: 40px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .section-header p {
   font-size: 18px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -211,55 +212,57 @@ const features = ref([
 }
 
 .faq-item {
-  background: white;
+  background: #111827;
   padding: 32px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
 }
 
 .faq-item h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .faq-item p {
-  color: #6b7280;
+  color: #9ca3af;
   line-height: 1.6;
 }
 
 /* Feature Comparison */
 .feature-comparison {
   padding: 120px 0;
-  background: white;
+  background: #18181b;
 }
 
 .comparison-table {
-  background: white;
+  background: #111827;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
 }
 
 .comparison-header {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  background: #f8fafc;
+  background: #1f2937;
   padding: 24px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .feature-column {
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   font-size: 18px;
 }
 
 .plan-column {
   text-align: center;
   font-weight: 600;
-  color: #007bff;
+  color: #efff94;
   font-size: 16px;
 }
 
@@ -267,7 +270,7 @@ const features = ref([
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   padding: 20px 24px;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid #374151;
   align-items: center;
 }
 
@@ -276,12 +279,12 @@ const features = ref([
 }
 
 .comparison-row:nth-child(even) {
-  background: #fafafa;
+  background: #1f2937;
 }
 
 .feature-name {
   font-weight: 500;
-  color: #374151;
+  color: #d1d5db;
 }
 
 .feature-check {
@@ -293,7 +296,7 @@ const features = ref([
 .check-icon {
   width: 20px;
   height: 20px;
-  color: #10b981;
+  color: #efff94;
 }
 
 .cross-icon {
@@ -304,8 +307,8 @@ const features = ref([
 
 /* CTA Section */
 .pricing-cta {
-  background: #1f2937;
-  color: white;
+  background: #18181b;
+  color: #ffffff;
   padding: 80px 0;
   text-align: center;
 }
@@ -318,7 +321,7 @@ const features = ref([
 
 .cta-content p {
   font-size: 18px;
-  opacity: 0.9;
+  color: #d1d5db;
   margin-bottom: 32px;
   max-width: 600px;
   margin-left: auto;
@@ -339,7 +342,7 @@ const features = ref([
 
 .guarantee {
   font-size: 14px;
-  opacity: 0.7;
+  color: #9ca3af;
   margin: 0;
 }
 

@@ -58,7 +58,7 @@ onMounted(() => {
 <style scoped>
 .question-detail-page {
   padding: 4rem 0;
-  background-color: #f9fafb;
+  background-color: #18181b;
 }
 
 .container {
@@ -70,13 +70,14 @@ onMounted(() => {
 .question-header {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .question-header h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin: 0.5rem 0;
+  color: #ffffff;
 }
 
 .difficulty-tag {
@@ -86,7 +87,7 @@ onMounted(() => {
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
 }
 
 .difficulty-tag.easy { background-color: #10b981; }
@@ -94,14 +95,14 @@ onMounted(() => {
 .difficulty-tag.hard { background-color: #ef4444; }
 
 .category-badge {
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 1rem;
 }
 
 .content-gate {
   text-align: center;
   padding: 3rem;
-  background-color: #fff;
+  background-color: #111827;
   border-radius: 8px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -115,8 +116,8 @@ onMounted(() => {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #4f46e5;
-  color: #fff;
+  background-color: #efff94;
+  color: #000000;
   text-decoration: none;
   font-weight: 600;
   border-radius: 8px;
@@ -124,11 +125,11 @@ onMounted(() => {
 }
 
 .btn-primary:hover {
-  background-color: #4338ca;
+  background-color: #d4e66a;
 }
 
 .question-content {
-  background-color: #fff;
+  background-color: #111827;
   padding: 2rem;
   border-radius: 8px;
 }

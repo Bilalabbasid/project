@@ -67,27 +67,27 @@ const challenges = ref([
 
 <style scoped>
 .challenge-grid-page {
-  background: #f8fafc;
+  background: #18181b;
   min-height: calc(100vh - 144px);
 }
 
 .challenge-grid-header {
-  background: white;
+  background: #18181b;
   padding: 64px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
   text-align: center;
 }
 
 .challenge-grid-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .challenge-grid-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 700px;
   margin: 0 auto;
 }

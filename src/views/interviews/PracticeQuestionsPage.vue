@@ -71,27 +71,27 @@ const questions = ref([
 
 <style scoped>
 .questions-page {
-  background: #f8fafc;
+  background: #18181b;
   min-height: calc(100vh - 144px);
 }
 
 .questions-header {
-  background: white;
+  background: #18181b;
   padding: 64px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
   text-align: center;
 }
 
 .questions-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .questions-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -109,25 +109,27 @@ const questions = ref([
 }
 
 .question-card {
-  background: white;
+  background: #111827;
   padding: 24px 32px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.3s ease;
+  border: 1px solid #374151;
 }
 
 .question-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: #efff94;
 }
 
 .question-info h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 

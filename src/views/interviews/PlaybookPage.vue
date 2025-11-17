@@ -88,26 +88,26 @@ const sections = ref([
 
 <style scoped>
 .playbook-page {
-  background: #f8fafc;
+  background: #18181b;
 }
 
 .playbook-header {
-  background: white;
+  background: #18181b;
   padding: 64px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
   text-align: center;
 }
 
 .playbook-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .playbook-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -129,7 +129,7 @@ const sections = ref([
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 24px;
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .playbook-sidebar ul {
@@ -139,7 +139,7 @@ const sections = ref([
 .sidebar-link {
   display: block;
   padding: 12px 16px;
-  color: #4b5563;
+  color: #9ca3af;
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -147,13 +147,13 @@ const sections = ref([
 }
 
 .sidebar-link:hover {
-  background: #e5e7eb;
-  color: #1f2937;
+  background: #1f2937;
+  color: #ffffff;
 }
 
 .sidebar-link.active {
-  background: #007bff;
-  color: white;
+  background: #efff94;
+  color: #000000;
 }
 
 .premium-badge {
@@ -168,14 +168,15 @@ const sections = ref([
 }
 
 .playbook-main {
-  background: white;
+  background: #111827;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #374151;
 }
 
 .playbook-section {
   padding: 48px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .playbook-section:last-child {
@@ -185,21 +186,21 @@ const sections = ref([
 .playbook-section h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 24px;
 }
 
 .playbook-section p {
   font-size: 18px;
   line-height: 1.7;
-  color: #4b5563;
+  color: #d1d5db;
 }
 
 .premium-fallback {
   margin-top: 32px;
   padding: 32px;
-  background: #fffbeb;
-  border: 1px solid #fde68a;
+  background: #1f2937;
+  border: 1px solid #efff94;
   border-radius: 12px;
   text-align: center;
 }
@@ -207,22 +208,22 @@ const sections = ref([
 .premium-fallback h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #ca8a04;
+  color: #efff94;
   margin-bottom: 16px;
 }
 
 .premium-fallback p {
-  color: #a16207;
+  color: #d1d5db;
   margin-bottom: 24px;
 }
 
 .btn-premium {
-  background: #ff6b35;
-  color: white;
+  background: #efff94;
+  color: #000000;
 }
 
 .btn-premium:hover {
-  background: #e55a2b;
+  background: #d4e66a;
 }
 
 @media (max-width: 768px) {

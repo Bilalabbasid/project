@@ -120,26 +120,26 @@ const activeTab = ref('requirements')
 
 <style scoped>
 .challenge-detail-page {
-  background: #f8fafc;
+  background: #18181b;
 }
 
 .challenge-header {
-  background: white;
+  background: #111827;
   padding: 64px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
   text-align: center;
 }
 
 .challenge-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .challenge-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 700px;
   margin: 0 auto 24px;
 }
@@ -181,7 +181,7 @@ const activeTab = ref('requirements')
 
 .challenge-tabs {
   display: flex;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
   margin-bottom: 32px;
 }
 
@@ -192,45 +192,45 @@ const activeTab = ref('requirements')
   border-bottom: 2px solid transparent;
   font-size: 18px;
   font-weight: 600;
-  color: #6b7280;
+  color: #9ca3af;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .tab-button:hover {
-  color: #1f2937;
+  color: #ffffff;
 }
 
 .tab-button.active {
-  color: #007bff;
-  border-bottom-color: #007bff;
+  color: #efff94;
+  border-bottom-color: #efff94;
 }
 
 .tab-pane {
-  background: white;
+  background: #111827;
   padding: 32px;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .tab-pane h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 24px;
 }
 
 .tab-pane p {
   font-size: 18px;
   line-height: 1.7;
-  color: #4b5563;
+  color: #d1d5db;
   margin-bottom: 16px;
 }
 
 .tab-pane h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
   margin-top: 32px;
   margin-bottom: 16px;
 }
@@ -269,12 +269,12 @@ const activeTab = ref('requirements')
 }
 
 .btn-premium {
-  background: #ff6b35;
-  color: white;
+  background: #efff94;
+  color: #000000;
 }
 
 .btn-premium:hover {
-  background: #e55a2b;
+  background: #d4e66a;
 }
 
 @media (max-width: 768px) {

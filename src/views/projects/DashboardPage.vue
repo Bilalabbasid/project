@@ -73,26 +73,26 @@ onMounted(async () => {
 
 <style scoped>
 .dashboard-page {
-  background: #f8fafc;
+  background: #18181b;
   min-height: calc(100vh - 144px);
 }
 
 .dashboard-header {
-  background: white;
+  background: #111827;
   padding: 64px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .dashboard-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .dashboard-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .dashboard-content {
@@ -107,7 +107,7 @@ onMounted(async () => {
 }
 
 .stat-card {
-  background: white;
+  background: #111827;
   padding: 32px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -117,20 +117,20 @@ onMounted(async () => {
 .stat-card h3 {
   font-size: 18px;
   font-weight: 600;
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 16px;
 }
 
 .stat-number {
   font-size: 48px;
   font-weight: 800;
-  color: #007bff;
+  color: #efff94;
 }
 
 .in-progress-section h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 32px;
 }
 
@@ -141,7 +141,7 @@ onMounted(async () => {
 }
 
 .challenge-item {
-  background: white;
+  background: #111827;
   padding: 24px 32px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -153,32 +153,32 @@ onMounted(async () => {
 .challenge-info h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .progress-bar {
   width: 200px;
   height: 8px;
-  background: #e5e7eb;
+  background: #374151;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .progress {
   height: 100%;
-  background: #007bff;
+  background: #efff94;
   border-radius: 4px;
 }
 
 .placeholder-text {
   text-align: center;
   padding: 48px;
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 18px;
-  background: white;
+  background: #111827;
   border-radius: 12px;
-  border: 2px dashed #e5e7eb;
+  border: 2px dashed #374151;
 }
 
 @media (max-width: 768px) {

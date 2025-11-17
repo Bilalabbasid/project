@@ -67,8 +67,8 @@ const props = defineProps({
 
 <style scoped>
 .challenge-card {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: #111827;
+  border: 1px solid #374151;
   border-radius: 12px;
   padding: 24px;
   transition: all 0.3s ease;
@@ -79,8 +79,8 @@ const props = defineProps({
 
 .challenge-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  border-color: #007bff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-color: #efff94;
 }
 
 .challenge-header {
@@ -137,12 +137,12 @@ const props = defineProps({
 .challenge-header h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .challenge-header p {
-  color: #6b7280;
+  color: #9ca3af;
   line-height: 1.5;
 }
 
@@ -158,7 +158,7 @@ const props = defineProps({
 .challenge-skills h4 {
   font-size: 14px;
   font-weight: 600;
-  color: #374151;
+  color: #d1d5db;
   margin-bottom: 8px;
 }
 
@@ -170,8 +170,8 @@ const props = defineProps({
 
 .skill-tag {
   padding: 2px 8px;
-  background: #f3f4f6;
-  color: #4b5563;
+  background: #1f2937;
+  color: #d1d5db;
   border-radius: 8px;
   font-size: 12px;
   font-weight: 500;
@@ -187,7 +187,7 @@ const props = defineProps({
   display: flex;
   align-items: center;
   gap: 4px;
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 14px;
 }
 
@@ -222,11 +222,11 @@ const props = defineProps({
 }
 
 .btn-premium {
-  background: #ff6b35;
-  color: white;
+  background: #efff94;
+  color: #000000;
 }
 
 .btn-premium:hover {
-  background: #e55a2b;
+  background: #d4e66a;
 }
 </style>

@@ -97,8 +97,8 @@
 
 /* Hero Section */
 .projects-hero {
-  background: linear-gradient(135deg, #ff6b35 0%, #f7c59f 100%);
-  color: white;
+  background: #18181b;
+  color: #ffffff;
   padding: 120px 0 80px;
   text-align: center;
 }
@@ -124,18 +124,18 @@
 }
 
 .btn-primary {
-  background: white;
-  color: #ff6b35;
+  background: #efff94;
+  color: #000000;
 }
 
 .btn-primary:hover {
-  background: #f8fafc;
+  background: #d4e66a;
 }
 
 /* Key Features Section */
 .key-features {
   padding: 120px 0;
-  background: #f8fafc;
+  background: #18181b;
 }
 
 .section-header {
@@ -146,13 +146,13 @@
 .section-header h2 {
   font-size: 40px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .section-header p {
   font-size: 18px;
-  color: #6b7280;
+  color: #9ca3af;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -164,29 +164,31 @@
 }
 
 .feature-card {
-  background: white;
+  background: #111827;
   padding: 40px 32px;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  border: 1px solid #374151;
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: #efff94;
 }
 
 .feature-icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #ff6b35, #f7c59f);
+  background: linear-gradient(135deg, #efff94, #d4e66a);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  color: white;
+  color: #000000;
 }
 
 .feature-icon svg {
@@ -197,31 +199,31 @@
 .feature-card h3 {
   font-size: 24px;
   font-weight: 700;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .feature-card p {
-  color: #6b7280;
+  color: #9ca3af;
   line-height: 1.6;
   margin-bottom: 24px;
 }
 
 .feature-link {
-  color: #ff6b35;
+  color: #efff94;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .feature-link:hover {
-  color: #e55a2b;
+  color: #d4e66a;
 }
 
 /* CTA Section */
 .projects-cta {
-  background: #1f2937;
-  color: white;
+  background: #18181b;
+  color: #ffffff;
   padding: 80px 0;
   text-align: center;
 }
@@ -234,7 +236,7 @@
 
 .cta-content p {
   font-size: 20px;
-  opacity: 0.9;
+  color: #d1d5db;
   margin-bottom: 32px;
   max-width: 600px;
   margin-left: auto;

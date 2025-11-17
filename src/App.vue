@@ -4,11 +4,13 @@
     <main>
       <router-view />
     </main>
+    <Footer />
   </div>
 </template>
 
 <script setup>
 import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <style>
@@ -19,12 +21,11 @@ import Header from './components/Header.vue'
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Inter', sans-serif;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  background-color: #0a0a0a;
+  background-color: #18181b;
   color: #ffffff;
 }
 
@@ -43,8 +44,8 @@ main {
 }
 
 .btn-primary {
-  background-color: #22c55e;
-  color: #000;
+  background-color: #efff94;
+  color: #000000;
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 6px;
@@ -57,14 +58,14 @@ main {
 }
 
 .btn-primary:hover {
-  background-color: #16a34a;
+  background-color: #d4e66a;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #ffffff;
+  color: #6b7280;
   padding: 0.75rem 1.5rem;
-  border: 1px solid #374151;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
   font-weight: 500;
   text-decoration: none;
@@ -75,17 +76,18 @@ main {
 }
 
 .btn-secondary:hover {
-  background-color: #1f2937;
-  border-color: #4b5563;
+  background-color: #f8fafc;
+  border-color: #d1d5db;
+  color: #1a1a1a;
 }
 
 /* Green accent color for highlights */
 .text-green {
-  color: #22c55e;
+  color: #efff94;
 }
 
 .bg-green {
-  background-color: #22c55e;
+  background-color: #efff94;
 }
 
 /* Dark theme utilities */

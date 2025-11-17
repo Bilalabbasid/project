@@ -50,26 +50,11 @@ const logout = () => {
           
           <router-link to="/dashboard" class="nav-link">Dashboard</router-link>
           <router-link to="/prepare" class="nav-link">Prepare</router-link>
+          <router-link to="/pricing" class="nav-link">Pricing</router-link>
         </nav>
 
         <!-- Right side actions -->
         <div class="header-actions">
-          <div class="theme-toggle">
-            <button class="theme-btn">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M8 1V3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M8 13V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M3.05039 3.05039L4.46461 4.46461" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M11.5356 11.5356L12.9498 12.9498" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M1 8H3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M13 8H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M3.05039 12.9498L4.46461 11.5356" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                <path d="M11.5356 4.46461L12.9498 3.05039" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              </svg>
-            </button>
-          </div>
-
           <div class="feedback-btn">
             <button class="btn-feedback">
               <span class="feedback-count">739</span>
@@ -106,7 +91,7 @@ const logout = () => {
 
 <style scoped>
 .header {
-  background-color: #0a0a0a;
+  background-color: #18181b;
   border-bottom: 1px solid #1f2937;
   position: sticky;
   top: 0;
@@ -114,8 +99,8 @@ const logout = () => {
 }
 
 .promo-banner {
-  background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);
-  color: #000;
+  background: linear-gradient(90deg, #efff94 0%, #d4e66a 100%);
+  color: #000000;
   padding: 0.5rem 0;
   font-size: 0.875rem;
   font-weight: 500;
@@ -134,7 +119,7 @@ const logout = () => {
   right: 0;
   background: none;
   border: none;
-  color: #000;
+  color: #000000;
   font-size: 1.25rem;
   cursor: pointer;
   width: 1.5rem;
@@ -142,6 +127,12 @@ const logout = () => {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.promo-close:hover {
+  opacity: 1;
 }
 
 .header-content {
@@ -159,10 +150,7 @@ const logout = () => {
 }
 
 .logo-text {
-  background: linear-gradient(45deg, #ffffff, #22c55e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .nav {
@@ -215,6 +203,7 @@ const logout = () => {
   transform: translateY(-0.5rem);
   transition: all 0.2s;
   z-index: 50;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -242,23 +231,9 @@ const logout = () => {
   gap: 1rem;
 }
 
-.theme-btn {
-  background: none;
-  border: none;
-  color: #9ca3af;
-  padding: 0.5rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.theme-btn:hover {
-  color: #ffffff;
-}
-
 .btn-feedback {
-  background: #22c55e;
-  color: #000;
+  background: #efff94;
+  color: #000000;
   border: none;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
@@ -272,12 +247,12 @@ const logout = () => {
 }
 
 .btn-feedback:hover {
-  background-color: #16a34a;
+  background-color: #d4e66a;
 }
 
 .feedback-count {
-  background: #000;
-  color: #22c55e;
+  background: #000000;
+  color: #efff94;
   padding: 0.125rem 0.375rem;
   border-radius: 3px;
   font-size: 0.75rem;

@@ -51,26 +51,26 @@
 
 <style scoped>
 .submissions-page {
-  background: #f8fafc;
+  background: #18181b;
   min-height: calc(100vh - 144px);
 }
 
 .submissions-header {
-  background: white;
+  background: #111827;
   padding: 64px 0;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #374151;
 }
 
 .submissions-header h1 {
   font-size: 48px;
   font-weight: 800;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
 .submissions-header p {
   font-size: 20px;
-  color: #6b7280;
+  color: #9ca3af;
 }
 
 .submissions-content {
@@ -84,7 +84,7 @@
 }
 
 .submission-card {
-  background: white;
+  background: #111827;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   overflow: hidden;
@@ -109,12 +109,12 @@
 .submission-info h3 {
   font-size: 20px;
   font-weight: 600;
-  color: #1f2937;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .submission-info p {
-  color: #6b7280;
+  color: #9ca3af;
   margin-bottom: 24px;
 }
 
@@ -128,11 +128,11 @@
   align-items: center;
   justify-content: center;
   padding: 48px;
-  color: #6b7280;
+  color: #9ca3af;
   font-size: 18px;
-  background: white;
+  background: #111827;
   border-radius: 12px;
-  border: 2px dashed #e5e7eb;
+  border: 2px dashed #374151;
   text-align: center;
   min-height: 300px;
 }
