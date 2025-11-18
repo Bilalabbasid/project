@@ -7,31 +7,51 @@
           <h1 class="page-title">Focus areas</h1>
           <p class="page-subtitle">Premium</p>
           <p class="page-description">
-            Deep-dive into topical focus areas critical for front end interviews.
+            Deep-dive into topical focus areas critical for front end
+            interviews.
           </p>
           <div class="premium-features">
             <div class="feature-item">
               <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
               </svg>
               10 topical deep-dives
             </div>
             <div class="feature-item">
               <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
               </svg>
               Code in browser
             </div>
             <div class="feature-item">
               <svg class="feature-icon" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
               </svg>
               Official solutions and tests
             </div>
           </div>
           <div class="intro-text">
-            <p>The vast breadth of topics that could come up during a front end interview can be daunting.</p>
-            <p>To simplify your preparation, we've carefully organized the entire front end domain into 10 critical focus areas, each covering the most frequently tested topics in interviews.</p>
+            <p>
+              The vast breadth of topics that could come up during a front end
+              interview can be daunting.
+            </p>
+            <p>
+              To simplify your preparation, we've carefully organized the entire
+              front end domain into 10 critical focus areas, each covering the
+              most frequently tested topics in interviews.
+            </p>
           </div>
         </header>
 
@@ -41,7 +61,8 @@
             <div class="focus-card">
               <h3 class="focus-title">JavaScript Polyfills</h3>
               <p class="focus-description">
-                Gain proficiency in front end fundamentals by implementing JavaScript and DOM APIs from scratch
+                Gain proficiency in front end fundamentals by implementing
+                JavaScript and DOM APIs from scratch
               </p>
               <div class="focus-meta">
                 <span class="question-count">26 questions</span>
@@ -49,7 +70,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -58,7 +83,8 @@
             <div class="focus-card">
               <h3 class="focus-title">Async Operations</h3>
               <p class="focus-description">
-                Sharpen your skills in asynchronous programming by practicing the use of async/await, Promises, and callback functions.
+                Sharpen your skills in asynchronous programming by practicing
+                the use of async/await, Promises, and callback functions.
               </p>
               <div class="focus-meta">
                 <span class="question-count">33 questions</span>
@@ -66,7 +92,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -75,7 +105,8 @@
             <div class="focus-card">
               <h3 class="focus-title">Lodash Functions</h3>
               <p class="focus-description">
-                Strengthen your proficiency in JavaScript through writing Lodash functions from scratch.
+                Strengthen your proficiency in JavaScript through writing Lodash
+                functions from scratch.
               </p>
               <div class="focus-meta">
                 <span class="question-count">28 questions</span>
@@ -83,7 +114,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -97,7 +132,9 @@
             <div class="focus-card">
               <h3 class="focus-title">DOM Manipulation</h3>
               <p class="focus-description">
-                Familiarize with selecting elements using CSS selectors, traverse the DOM hierarchy, and manipulate their properties, content, and styles.
+                Familiarize with selecting elements using CSS selectors,
+                traverse the DOM hierarchy, and manipulate their properties,
+                content, and styles.
               </p>
               <div class="focus-meta">
                 <span class="question-count">10 questions</span>
@@ -105,7 +142,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -122,7 +163,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -139,7 +184,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -148,15 +197,22 @@
             <div class="focus-card">
               <h3 class="focus-title">Design System Components</h3>
               <p class="focus-description">
-                Elevate your front-end skills by practicing the creation of front end design system components.
+                Elevate your front-end skills by practicing the creation of
+                front end design system components.
               </p>
               <div class="focus-meta">
                 <span class="question-count">15 questions</span>
-                <span class="topics">Topics: UI component, Accessibility, CSS</span>
+                <span class="topics"
+                  >Topics: UI component, Accessibility, CSS</span
+                >
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -165,7 +221,8 @@
             <div class="focus-card">
               <h3 class="focus-title">State Management</h3>
               <p class="focus-description">
-                Train your skills in designing complex state and implementing operations to manipulate state.
+                Train your skills in designing complex state and implementing
+                operations to manipulate state.
               </p>
               <div class="focus-meta">
                 <span class="question-count">17 questions</span>
@@ -173,7 +230,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -190,7 +251,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -204,7 +269,8 @@
             <div class="focus-card">
               <h3 class="focus-title">Data Structures & Algorithms</h3>
               <p class="focus-description">
-                Hone your computer science fundamentals by implementing important data structures and algorithms from scratch.
+                Hone your computer science fundamentals by implementing
+                important data structures and algorithms from scratch.
               </p>
               <div class="focus-meta">
                 <span class="question-count">22 questions</span>
@@ -212,7 +278,11 @@
               </div>
               <button class="focus-button locked">
                 <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <path
+                    fill-rule="evenodd"
+                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
                 Practice
               </button>
@@ -224,28 +294,61 @@
           <h2 class="section-title">Focus Areas for Front End Interviews</h2>
           <div class="details-content">
             <p class="details-description">
-              Front end interviews cover such a vast range of possible topics that it can be hard to wrap your head around. In an ideal world, you should start with the topics that are most likely to come up and where you're weakest.
+              Front end interviews cover such a vast range of possible topics
+              that it can be hard to wrap your head around. In an ideal world,
+              you should start with the topics that are most likely to come up
+              and where you're weakest.
             </p>
             <p class="details-description">
-              To make your preparation more focused, we have meticulously organized the entire front end interview domain into 10 critical focus areas. These bite-sized lists of practice questions are designed to help you deep-dive into the key topics that are most frequently tested in front end interviews.
+              To make your preparation more focused, we have meticulously
+              organized the entire front end interview domain into 10 critical
+              focus areas. These bite-sized lists of practice questions are
+              designed to help you deep-dive into the key topics that are most
+              frequently tested in front end interviews.
             </p>
 
             <h3 class="details-subtitle">Key Features</h3>
             <ul class="features-list">
               <li class="feature-item">
-                <strong>Quality materials by credible engineers:</strong> All the materials on the platform—including every question, solution, test case, and focus area—have been written and curated by big tech ex-interviewers who have conducted numerous interviews at top tech companies. We strive in every piece to deliver streamlined, high quality content.
+                <strong>Quality materials by credible engineers:</strong> All
+                the materials on the platform—including every question,
+                solution, test case, and focus area—have been written and
+                curated by big tech ex-interviewers who have conducted numerous
+                interviews at top tech companies. We strive in every piece to
+                deliver streamlined, high quality content.
               </li>
               <li class="feature-item">
-                <strong>Deep dive into essential topics:</strong> Our focus areas provide in-depth coverage of the 10 most critical topics for front end interviews. These include everything from JavaScript engineering to UI development and computer science foundations.
+                <strong>Deep dive into essential topics:</strong> Our focus
+                areas provide in-depth coverage of the 10 most critical topics
+                for front end interviews. These include everything from
+                JavaScript engineering to UI development and computer science
+                foundations.
               </li>
               <li class="feature-item">
-                <strong>Streamlined preparation:</strong> By breaking down the front end domain into manageable sections, our focus areas simplify your preparation process. You can prioritize the topics where you're weaker first and then tackle the other areas if time permits.
+                <strong>Streamlined preparation:</strong> By breaking down the
+                front end domain into manageable sections, our focus areas
+                simplify your preparation process. You can prioritize the topics
+                where you're weaker first and then tackle the other areas if
+                time permits.
               </li>
               <li class="feature-item">
-                <strong>Mock interview environment:</strong> Practice makes perfect, and it doesn't have to be a hassle. Our platform allows you to code directly in your browser. Moreover, our coding workspace is built to be a realistic environment that closely replicates actual interview conditions. This setup helps you get accustomed to the tools and situations you'll face in your interviews.
+                <strong>Mock interview environment:</strong> Practice makes
+                perfect, and it doesn't have to be a hassle. Our platform allows
+                you to code directly in your browser. Moreover, our coding
+                workspace is built to be a realistic environment that closely
+                replicates actual interview conditions. This setup helps you get
+                accustomed to the tools and situations you'll face in your
+                interviews.
               </li>
               <li class="feature-item">
-                <strong>Official solutions and tests for every question:</strong> Each practice question within our focus areas comes with official solutions and tests. These solutions are crafted by experienced engineers and are designed to provide clear, detailed explanations that help you understand the best approach to each problem.
+                <strong
+                  >Official solutions and tests for every question:</strong
+                >
+                Each practice question within our focus areas comes with
+                official solutions and tests. These solutions are crafted by
+                experienced engineers and are designed to provide clear,
+                detailed explanations that help you understand the best approach
+                to each problem.
               </li>
             </ul>
           </div>
@@ -256,7 +359,7 @@
 </template>
 
 <script setup>
-import InterviewSidebar from '../../components/InterviewSidebar.vue'
+import InterviewSidebar from "../../components/InterviewSidebar.vue";
 </script>
 
 <style scoped>
@@ -270,6 +373,8 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 .main-content {
   flex: 1;
   padding: 24px;
+  padding-top: 104px;
+  margin-left: 240px;
 }
 
 .content-wrapper {

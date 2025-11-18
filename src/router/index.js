@@ -17,7 +17,13 @@ import PlaybookIntroduction from "../views/interviews/PlaybookIntroduction.vue";
 import ReactPlaybook from "../views/interviews/ReactPlaybook.vue";
 import ReactIntroduction from "../views/interviews/ReactIntroduction.vue";
 import ReactLandscape from "../views/interviews/ReactLandscape.vue";
+import ReactDeclarativeThinking from "../views/interviews/ReactDeclarativeThinking.vue";
 import ReactPreparation from "../views/interviews/ReactPreparation.vue";
+import ReactStateDesign from "../views/interviews/ReactStateDesign.vue";
+import ReactHooks from "../views/interviews/ReactHooks.vue";
+import ReactEventHandling from "../views/interviews/ReactEventHandling.vue";
+import ReactBasicConcepts from "../views/interviews/ReactBasicConcepts.vue";
+import ReactForms from "../views/interviews/ReactForms.vue";
 import PracticeQuestionsPage from "../views/interviews/PracticeQuestionsPage.vue";
 import AllPracticeQuestions from "../views/interviews/AllPracticeQuestions.vue";
 import FrameworksLanguages from "../views/interviews/FrameworksLanguages.vue";
@@ -214,14 +220,97 @@ const routes = [
     component: ReactLandscape,
   },
   {
+    path: "/interviews/playbook/react/declarative-thinking",
+    name: "ReactDeclarativeThinking",
+    component: ReactDeclarativeThinking,
+  },
+  {
     path: "/interviews/playbook/react/preparation",
     name: "ReactPreparation",
     component: ReactPreparation,
   },
   {
+    path: "/interviews/playbook/react/state-design",
+    name: "ReactStateDesign",
+    component: ReactStateDesign,
+  },
+  {
+    path: "/interviews/playbook/react/hooks",
+    name: "ReactHooks",
+    component: ReactHooks,
+  },
+  {
+    path: "/interviews/playbook/react/event-handling",
+    name: "ReactEventHandling",
+    component: ReactEventHandling,
+  },
+
+  {
+    path: "/interviews/playbook/react/signup-form",
+    name: "ReactSignupForm",
+    component: () => import("../views/interviews/ReactSignupForm.vue"),
+  },
+  {
+    path: "/interviews/playbook/react/data-fetching",
+    name: "ReactDataFetching",
+    component: () => import("../views/interviews/ReactDataFetching.vue"),
+  },
+  {
+    path: "/interviews/playbook/react/design-patterns",
+    name: "ReactDesignPatterns",
+    component: () => import("../views/interviews/ReactDesignPatterns.vue"),
+  },
+  {
+    path: "/interviews/playbook/react/basic-concepts",
+    name: "ReactBasicConcepts",
+    component: ReactBasicConcepts,
+  },
+  {
     path: "/interviews/playbook/behavioral",
     name: "BehavioralPlaybook",
-    component: PlaybookPage, // Using PlaybookPage as placeholder
+    component: () => import("../views/interviews/BehavioralPlaybook.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/intro",
+    name: "BehavioralIntro",
+    component: () => import("../views/interviews/BehavioralIntro.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/common-questions",
+    name: "BehavioralCommonQuestions",
+    component: () =>
+      import("../views/interviews/BehavioralCommonQuestions.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/tell-me-about-yourself",
+    name: "BehavioralTellMeAboutYourself",
+    component: () =>
+      import("../views/interviews/BehavioralTellMeAboutYourself.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/why-work-here",
+    name: "BehavioralWhyWorkHere",
+    component: () => import("../views/interviews/BehavioralWhyWorkHere.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/questions-to-ask",
+    name: "BehavioralQuestionsToAsk",
+    component: () => import("../views/interviews/BehavioralQuestionsToAsk.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/problem-solving",
+    name: "BehavioralProblemSolving",
+    component: () => import("../views/interviews/BehavioralProblemSolving.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/collaborative",
+    name: "BehavioralCollaborative",
+    component: () => import("../views/interviews/BehavioralCollaborative.vue"),
+  },
+  {
+    path: "/interviews/playbook/behavioral/growth-mindset",
+    name: "BehavioralGrowthMindset",
+    component: () => import("../views/interviews/BehavioralGrowthMindset.vue"),
   },
   {
     path: "/interviews/study-plans",

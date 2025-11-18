@@ -9,55 +9,58 @@
         <div class="container">
           <div class="page-header">
             <h1>Frameworks & Languages</h1>
-            <p>Practice questions organized by technology stack and programming language.</p>
+            <p>
+              Practice questions organized by technology stack and programming
+              language.
+            </p>
           </div>
 
           <div class="frameworks-grid">
-        <div class="framework-card">
-          <h3>JavaScript</h3>
-          <p>Core language fundamentals and advanced concepts</p>
-          <div class="question-count">45 questions</div>
-        </div>
+            <div class="framework-card">
+              <h3>JavaScript</h3>
+              <p>Core language fundamentals and advanced concepts</p>
+              <div class="question-count">45 questions</div>
+            </div>
 
-        <div class="framework-card">
-          <h3>React</h3>
-          <p>Component lifecycle, hooks, state management</p>
-          <div class="question-count">32 questions</div>
-        </div>
+            <div class="framework-card">
+              <h3>React</h3>
+              <p>Component lifecycle, hooks, state management</p>
+              <div class="question-count">32 questions</div>
+            </div>
 
-        <div class="framework-card">
-          <h3>Vue.js</h3>
-          <p>Reactivity, composition API, component communication</p>
-          <div class="question-count">28 questions</div>
-        </div>
+            <div class="framework-card">
+              <h3>Vue.js</h3>
+              <p>Reactivity, composition API, component communication</p>
+              <div class="question-count">28 questions</div>
+            </div>
 
-        <div class="framework-card">
-          <h3>Angular</h3>
-          <p>Dependency injection, modules, services</p>
-          <div class="question-count">24 questions</div>
-        </div>
+            <div class="framework-card">
+              <h3>Angular</h3>
+              <p>Dependency injection, modules, services</p>
+              <div class="question-count">24 questions</div>
+            </div>
 
-        <div class="framework-card">
-          <h3>Node.js</h3>
-          <p>Server-side JavaScript, APIs, databases</p>
-          <div class="question-count">31 questions</div>
-        </div>
+            <div class="framework-card">
+              <h3>Node.js</h3>
+              <p>Server-side JavaScript, APIs, databases</p>
+              <div class="question-count">31 questions</div>
+            </div>
 
-        <div class="framework-card">
-          <h3>TypeScript</h3>
-          <p>Type system, interfaces, generics</p>
-          <div class="question-count">26 questions</div>
-        </div>
+            <div class="framework-card">
+              <h3>TypeScript</h3>
+              <p>Type system, interfaces, generics</p>
+              <div class="question-count">26 questions</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script setup>
 // Placeholder component for frameworks/languages page
-import InterviewSidebar from '../../components/InterviewSidebar.vue'
+import InterviewSidebar from "../../components/InterviewSidebar.vue";
 </script>
 
 <style scoped>
@@ -76,6 +79,8 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
   flex: 1;
   background: #18181b;
   padding: 80px 0;
+  padding-top: 160px;
+  margin-left: 240px;
 }
 
 .page-header {

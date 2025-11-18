@@ -317,9 +317,13 @@ const toggleGuidesDropdown = () => {
   background: #18181b;
   border-right: 1px solid #374151;
   padding: 24px 0;
-  height: fit-content;
-  min-height: calc(100vh - 120px);
+  padding-top: 100px;
+  height: 100vh;
   flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
 .sidebar-nav ul {

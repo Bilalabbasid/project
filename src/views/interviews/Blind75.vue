@@ -9,7 +9,10 @@
         <div class="container">
           <div class="page-header">
             <h1>Blind 75</h1>
-            <p>The most frequently asked LeetCode questions in technical interviews</p>
+            <p>
+              The most frequently asked LeetCode questions in technical
+              interviews
+            </p>
           </div>
 
           <div class="stats-section">
@@ -31,14 +34,20 @@
             <div class="difficulty-section">
               <h2>Easy (17 questions)</h2>
               <div class="question-grid">
-                <div class="question-card" v-for="question in easyQuestions" :key="question.id">
+                <div
+                  class="question-card"
+                  v-for="question in easyQuestions"
+                  :key="question.id"
+                >
                   <div class="question-header">
                     <h3>{{ question.title }}</h3>
                     <span class="difficulty easy">Easy</span>
                   </div>
                   <p>{{ question.description }}</p>
                   <div class="question-tags">
-                    <span v-for="tag in question.tags" :key="tag" class="tag">{{ tag }}</span>
+                    <span v-for="tag in question.tags" :key="tag" class="tag">{{
+                      tag
+                    }}</span>
                   </div>
                 </div>
               </div>
@@ -47,14 +56,20 @@
             <div class="difficulty-section">
               <h2>Medium (44 questions)</h2>
               <div class="question-grid">
-                <div class="question-card" v-for="question in mediumQuestions" :key="question.id">
+                <div
+                  class="question-card"
+                  v-for="question in mediumQuestions"
+                  :key="question.id"
+                >
                   <div class="question-header">
                     <h3>{{ question.title }}</h3>
                     <span class="difficulty medium">Medium</span>
                   </div>
                   <p>{{ question.description }}</p>
                   <div class="question-tags">
-                    <span v-for="tag in question.tags" :key="tag" class="tag">{{ tag }}</span>
+                    <span v-for="tag in question.tags" :key="tag" class="tag">{{
+                      tag
+                    }}</span>
                   </div>
                 </div>
               </div>
@@ -63,14 +78,20 @@
             <div class="difficulty-section">
               <h2>Hard (14 questions)</h2>
               <div class="question-grid">
-                <div class="question-card" v-for="question in hardQuestions" :key="question.id">
+                <div
+                  class="question-card"
+                  v-for="question in hardQuestions"
+                  :key="question.id"
+                >
                   <div class="question-header">
                     <h3>{{ question.title }}</h3>
                     <span class="difficulty hard">Hard</span>
                   </div>
                   <p>{{ question.description }}</p>
                   <div class="question-tags">
-                    <span v-for="tag in question.tags" :key="tag" class="tag">{{ tag }}</span>
+                    <span v-for="tag in question.tags" :key="tag" class="tag">{{
+                      tag
+                    }}</span>
                   </div>
                 </div>
               </div>
@@ -83,71 +104,73 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import InterviewSidebar from '../../components/InterviewSidebar.vue'
+import { ref } from "vue";
+import InterviewSidebar from "../../components/InterviewSidebar.vue";
 
 const easyQuestions = ref([
   {
     id: 1,
-    title: 'Two Sum',
-    description: 'Find two numbers in an array that add up to a target sum',
-    tags: ['Array', 'Hash Table']
+    title: "Two Sum",
+    description: "Find two numbers in an array that add up to a target sum",
+    tags: ["Array", "Hash Table"],
   },
   {
     id: 2,
-    title: 'Valid Parentheses',
-    description: 'Check if a string of parentheses is valid',
-    tags: ['String', 'Stack']
+    title: "Valid Parentheses",
+    description: "Check if a string of parentheses is valid",
+    tags: ["String", "Stack"],
   },
   {
     id: 3,
-    title: 'Merge Two Sorted Lists',
-    description: 'Merge two sorted linked lists into one',
-    tags: ['Linked List']
-  }
-])
+    title: "Merge Two Sorted Lists",
+    description: "Merge two sorted linked lists into one",
+    tags: ["Linked List"],
+  },
+]);
 
 const mediumQuestions = ref([
   {
     id: 4,
-    title: 'Add Two Numbers',
-    description: 'Add two numbers represented as linked lists',
-    tags: ['Linked List', 'Math']
+    title: "Add Two Numbers",
+    description: "Add two numbers represented as linked lists",
+    tags: ["Linked List", "Math"],
   },
   {
     id: 5,
-    title: 'Longest Substring Without Repeating Characters',
-    description: 'Find the length of the longest substring without repeating characters',
-    tags: ['String', 'Sliding Window']
+    title: "Longest Substring Without Repeating Characters",
+    description:
+      "Find the length of the longest substring without repeating characters",
+    tags: ["String", "Sliding Window"],
   },
   {
     id: 6,
-    title: '3Sum',
-    description: 'Find all triplets that sum to zero',
-    tags: ['Array', 'Two Pointers']
-  }
-])
+    title: "3Sum",
+    description: "Find all triplets that sum to zero",
+    tags: ["Array", "Two Pointers"],
+  },
+]);
 
 const hardQuestions = ref([
   {
     id: 7,
-    title: 'Median of Two Sorted Arrays',
-    description: 'Find the median of two sorted arrays',
-    tags: ['Array', 'Binary Search']
+    title: "Median of Two Sorted Arrays",
+    description: "Find the median of two sorted arrays",
+    tags: ["Array", "Binary Search"],
   },
   {
     id: 8,
-    title: 'Regular Expression Matching',
-    description: 'Implement regular expression matching with support for . and *',
-    tags: ['String', 'Dynamic Programming']
+    title: "Regular Expression Matching",
+    description:
+      "Implement regular expression matching with support for . and *",
+    tags: ["String", "Dynamic Programming"],
   },
   {
     id: 9,
-    title: 'Merge k Sorted Lists',
-    description: 'Merge k sorted linked lists and return as one sorted list',
-    tags: ['Linked List', 'Heap']
-  }
-])
+    title: "Merge k Sorted Lists",
+    description: "Merge k sorted linked lists and return as one sorted list",
+    tags: ["Linked List", "Heap"],
+  },
+]);
 </script>
 
 <style scoped>
@@ -166,6 +189,8 @@ const hardQuestions = ref([
   flex: 1;
   background: #18181b;
   padding: 80px 0;
+  padding-top: 160px;
+  margin-left: 240px;
 }
 
 .page-header {

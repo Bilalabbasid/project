@@ -591,6 +591,8 @@ import PlaybookArticleSidebar from "../../components/PlaybookArticleSidebar.vue"
 .article-main {
   flex: 1;
   padding: 40px 0;
+  padding-top: 120px;
+  margin-left: 300px;
 }
 
 .article-header {

@@ -11,7 +11,11 @@
           <section class="interview-hero">
             <div class="interview-hero-content">
               <h1>Prepare for Front-End Interviews</h1>
-              <p>Master the skills and knowledge needed to ace interviews at top tech companies. From data structures to system design, we've got you covered.</p>
+              <p>
+                Master the skills and knowledge needed to ace interviews at top
+                tech companies. From data structures to system design, we've got
+                you covered.
+              </p>
               <div class="hero-actions">
                 <router-link to="/interviews/playbook" class="btn btn-primary">
                   View the Playbook
@@ -27,18 +31,26 @@
           <section class="key-features">
             <div class="section-header">
               <h2>Your Path to Interview Success</h2>
-              <p>Structured resources to help you prepare efficiently and effectively</p>
+              <p>
+                Structured resources to help you prepare efficiently and
+                effectively
+              </p>
             </div>
 
             <div class="features-grid">
               <div class="feature-card">
                 <div class="feature-icon">
                   <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                    />
+                  </svg>
                 </div>
                 <h3>Comprehensive Playbook</h3>
-                <p>Our definitive guide covers every aspect of the front-end interview process, from initial screening to final rounds.</p>
+                <p>
+                  Our definitive guide covers every aspect of the front-end
+                  interview process, from initial screening to final rounds.
+                </p>
                 <router-link to="/interviews/playbook" class="feature-link">
                   Explore the Playbook →
                 </router-link>
@@ -47,11 +59,14 @@
               <div class="feature-card">
                 <div class="feature-icon">
                   <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                 </div>
                 <h3>Curated Practice Questions</h3>
-                <p>Solve a wide range of questions that mirror what you'll face in real interviews at FAANG and other top companies.</p>
+                <p>
+                  Solve a wide range of questions that mirror what you'll face
+                  in real interviews at FAANG and other top companies.
+                </p>
                 <router-link to="/interviews/questions" class="feature-link">
                   Browse Questions →
                 </router-link>
@@ -60,11 +75,16 @@
               <div class="feature-card">
                 <div class="feature-icon">
                   <svg fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547A8.014 8.014 0 004 21h16a8.014 8.014 0 00-.572-5.572zM8 9a4 4 0 108 0v0a4 4 0 00-8 0v0z"/>
-                    </svg>
+                    <path
+                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547A8.014 8.014 0 004 21h16a8.014 8.014 0 00-.572-5.572zM8 9a4 4 0 108 0v0a4 4 0 00-8 0v0z"
+                    />
+                  </svg>
                 </div>
                 <h3>Expert-Led Explanations</h3>
-                <p>Understand the 'why' behind every solution with detailed, step-by-step explanations from industry experts.</p>
+                <p>
+                  Understand the 'why' behind every solution with detailed,
+                  step-by-step explanations from industry experts.
+                </p>
                 <router-link to="/interviews/questions" class="feature-link">
                   Learn from the Best →
                 </router-link>
@@ -76,7 +96,10 @@
           <section class="interview-cta">
             <div class="cta-content">
               <h2>Ready to Ace Your Next Interview?</h2>
-              <p>Unlock all our premium content and get the edge you need to succeed.</p>
+              <p>
+                Unlock all our premium content and get the edge you need to
+                succeed.
+              </p>
               <div class="cta-actions">
                 <router-link to="/pricing" class="btn btn-primary btn-large">
                   Go Premium
@@ -91,7 +114,7 @@
 </template>
 
 <script setup>
-import InterviewSidebar from '../../components/InterviewSidebar.vue'
+import InterviewSidebar from "../../components/InterviewSidebar.vue";
 </script>
 
 <style scoped>
@@ -110,6 +133,8 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 .interview-main {
   flex: 1;
   min-width: 0;
+  padding-top: 80px;
+  margin-left: 240px;
 }
 
 /* Hero Section */

@@ -156,17 +156,7 @@
                 Event Handling in React Interviews
               </router-link>
             </li>
-            <li>
-              <router-link
-                to="/interviews/playbook/react/forms"
-                class="subsection-link"
-                :class="{
-                  active: $route.path === '/interviews/playbook/react/forms',
-                }"
-              >
-                Forms in React Interviews
-              </router-link>
-            </li>
+
             <li>
               <router-link
                 to="/interviews/playbook/react/signup-form"
@@ -277,11 +267,13 @@ const toggleTopicsDropdown = () => {
   background: #18181b;
   border-right: 1px solid #374151;
   padding: 24px 0;
-  height: fit-content;
-  min-height: calc(100vh - 120px);
+  padding-top: 100px;
+  height: 100vh;
   flex-shrink: 0;
-  position: sticky;
-  top: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 }
 
 .sidebar-nav {

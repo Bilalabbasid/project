@@ -1,25 +1,55 @@
 <template>
-  <aside class="system-design-sidebar">
+  <aside class="behavioral-playbook-sidebar">
     <nav class="sidebar-nav">
       <div class="sidebar-header">
-        <h3>Frontend System Design Playbook</h3>
+        <h3>Behavioral Interview Playbook</h3>
         <p>Table of Contents</p>
       </div>
 
       <ul class="toc-list">
-        <!-- Guidebook section (dropdown) -->
+        <!-- Overview section -->
+        <li class="toc-section">
+          <router-link
+            to="/interviews/playbook/behavioral/intro"
+            class="section-link"
+            :class="{
+              active: $route.path === '/interviews/playbook/behavioral/intro',
+            }"
+          >
+            <span class="section-number">1</span>
+            <span class="section-title">Intro to Behavioral Interviews</span>
+          </router-link>
+        </li>
+
+        <!-- Common Questions section -->
+        <li class="toc-section">
+          <router-link
+            to="/interviews/playbook/behavioral/common-questions"
+            class="section-link"
+            :class="{
+              active:
+                $route.path ===
+                '/interviews/playbook/behavioral/common-questions',
+            }"
+          >
+            <span class="section-number">2</span>
+            <span class="section-title">Most Common Questions</span>
+          </router-link>
+        </li>
+
+        <!-- Solving Common Questions section (dropdown) -->
         <li class="toc-section dropdown-section">
           <div class="section-header">
-            <span class="section-number">1</span>
+            <span class="section-number">3</span>
             <button
               class="section-title dropdown-trigger"
-              @click="toggleGuidebookDropdown"
-              :class="{ active: isGuidebookActive }"
+              @click="toggleSolvingDropdown"
+              :class="{ active: isSolvingActive }"
             >
-              Guidebook
+              Solving Common Questions
               <svg
                 class="dropdown-arrow"
-                :class="{ rotated: guidebookDropdownOpen }"
+                :class="{ rotated: solvingDropdownOpen }"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -31,96 +61,86 @@
               </svg>
             </button>
           </div>
-          <ul v-show="guidebookDropdownOpen" class="subsection-list">
+          <ul v-show="solvingDropdownOpen" class="subsection-list">
             <li>
               <router-link
-                to="/interviews/system-design/introduction"
-                class="subsection-link"
-                :class="{
-                  active:
-                    $route.path === '/interviews/system-design/introduction',
-                }"
-              >
-                Introduction
-              </router-link>
-            </li>
-            <li>
-              <router-link
-                to="/interviews/system-design/types-of-questions"
+                to="/interviews/playbook/behavioral/tell-me-about-yourself"
                 class="subsection-link"
                 :class="{
                   active:
                     $route.path ===
-                    '/interviews/system-design/types-of-questions',
+                    '/interviews/playbook/behavioral/tell-me-about-yourself',
                 }"
               >
-                Types of questions
+                Answering "Tell Me About Yourself"
               </router-link>
             </li>
             <li>
               <router-link
-                to="/interviews/system-design/framework"
-                class="subsection-link"
-                :class="{
-                  active: $route.path === '/interviews/system-design/framework',
-                }"
-              >
-                RADIO framework
-              </router-link>
-            </li>
-            <li>
-              <router-link
-                to="/interviews/system-design/evaluation-axes"
+                to="/interviews/playbook/behavioral/why-work-here"
                 class="subsection-link"
                 :class="{
                   active:
-                    $route.path === '/interviews/system-design/evaluation-axes',
+                    $route.path ===
+                    '/interviews/playbook/behavioral/why-work-here',
                 }"
               >
-                Evaluation axes
+                Answering "Why Work Here"
               </router-link>
             </li>
             <li>
               <router-link
-                to="/interviews/system-design/common-mistakes"
+                to="/interviews/playbook/behavioral/questions-to-ask"
                 class="subsection-link"
                 :class="{
                   active:
-                    $route.path === '/interviews/system-design/common-mistakes',
+                    $route.path ===
+                    '/interviews/playbook/behavioral/questions-to-ask',
                 }"
               >
-                Common mistakes
+                Questions to Ask (End of Interview)
               </router-link>
             </li>
             <li>
               <router-link
-                to="/interviews/system-design/cheatsheet"
+                to="/interviews/playbook/behavioral/problem-solving"
                 class="subsection-link"
                 :class="{
                   active:
-                    $route.path === '/interviews/system-design/cheatsheet',
+                    $route.path ===
+                    '/interviews/playbook/behavioral/problem-solving',
                 }"
               >
-                Cheatsheet
+                Problem Solving Questions
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/interviews/playbook/behavioral/collaborative"
+                class="subsection-link"
+                :class="{
+                  active:
+                    $route.path ===
+                    '/interviews/playbook/behavioral/collaborative',
+                }"
+              >
+                Collaborative Questions
+              </router-link>
+            </li>
+            <li>
+              <router-link
+                to="/interviews/playbook/behavioral/growth-mindset"
+                class="subsection-link"
+                :class="{
+                  active:
+                    $route.path ===
+                    '/interviews/playbook/behavioral/growth-mindset',
+                }"
+              >
+                Growth Mindset Questions
               </router-link>
             </li>
           </ul>
-        </li>
-
-        <!-- Questions section -->
-        <li class="toc-section">
-          <div class="section-header">
-            <span class="section-number">2</span>
-            <router-link
-              to="/interviews/system-design"
-              class="section-title"
-              :class="{
-                active: $route.path === '/interviews/system-design',
-              }"
-            >
-              Questions
-            </router-link>
-          </div>
         </li>
       </ul>
 
@@ -139,37 +159,37 @@ import { useRoute } from "vue-router";
 
 const route = useRoute();
 
-const guidebookDropdownOpen = ref(false);
+const solvingDropdownOpen = ref(false);
 
-// Check if current route is in guidebook section
-const isGuidebookActive = computed(() => {
-  const guidebookPaths = [
-    "/interviews/system-design/introduction",
-    "/interviews/system-design/types-of-questions",
-    "/interviews/system-design/framework",
-    "/interviews/system-design/evaluation-axes",
-    "/interviews/system-design/common-mistakes",
-    "/interviews/system-design/cheatsheet",
+// Check if current route is in solving section
+const isSolvingActive = computed(() => {
+  const solvingPaths = [
+    "/interviews/playbook/behavioral/tell-me-about-yourself",
+    "/interviews/playbook/behavioral/why-work-here",
+    "/interviews/playbook/behavioral/questions-to-ask",
+    "/interviews/playbook/behavioral/problem-solving",
+    "/interviews/playbook/behavioral/collaborative",
+    "/interviews/playbook/behavioral/growth-mindset",
   ];
-  return guidebookPaths.includes(route.path);
+  return solvingPaths.includes(route.path);
 });
 
-// Auto-open dropdowns based on current route
+// Auto-open dropdown based on current route
 watch(
-  [isGuidebookActive],
-  ([guidebook]) => {
-    guidebookDropdownOpen.value = guidebook;
+  isSolvingActive,
+  (active) => {
+    solvingDropdownOpen.value = active;
   },
   { immediate: true }
 );
 
-const toggleGuidebookDropdown = () => {
-  guidebookDropdownOpen.value = !guidebookDropdownOpen.value;
+const toggleSolvingDropdown = () => {
+  solvingDropdownOpen.value = !solvingDropdownOpen.value;
 };
 </script>
 
 <style scoped>
-.system-design-sidebar {
+.behavioral-playbook-sidebar {
   width: 300px;
   background: #18181b;
   border-right: 1px solid #374151;
@@ -214,6 +234,28 @@ const toggleGuidebookDropdown = () => {
 
 .toc-section {
   margin-bottom: 8px;
+}
+
+.section-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+  padding: 8px 0;
+}
+
+.section-link:hover {
+  color: #ffffff;
+}
+
+.section-link.active {
+  color: #dcee77;
+  font-weight: 600;
 }
 
 .section-header {
@@ -332,13 +374,13 @@ const toggleGuidebookDropdown = () => {
 }
 
 @media (max-width: 1024px) {
-  .system-design-sidebar {
+  .behavioral-playbook-sidebar {
     width: 250px;
   }
 }
 
 @media (max-width: 768px) {
-  .system-design-sidebar {
+  .behavioral-playbook-sidebar {
     display: none;
   }
 }
