@@ -16,7 +16,7 @@
                 <router-link to="/interviews/playbook" class="btn btn-primary">
                   View the Playbook
                 </router-link>
-                <router-link to="/interviews/questions" class="btn btn-outline">
+                <router-link to="/interviews/questions" class="btn btn-primary">
                   Practice Questions
                 </router-link>
               </div>

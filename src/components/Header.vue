@@ -37,7 +37,7 @@ const logout = () => {
       <div class="header-content">
         <!-- Logo -->
         <router-link to="/" class="logo">
-          <span class="logo-text">techmade</span>
+          <span class="logo-text">Techmade</span>
         </router-link>
 
         <!-- Navigation -->

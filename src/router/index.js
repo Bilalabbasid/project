@@ -13,7 +13,11 @@ import AccountPage from "../views/auth/AccountPage.vue";
 // Interview Views
 import InterviewHome from "../views/interviews/InterviewHome.vue";
 import PlaybookPage from "../views/interviews/PlaybookPage.vue";
+import PlaybookIntroduction from "../views/interviews/PlaybookIntroduction.vue";
 import ReactPlaybook from "../views/interviews/ReactPlaybook.vue";
+import ReactIntroduction from "../views/interviews/ReactIntroduction.vue";
+import ReactLandscape from "../views/interviews/ReactLandscape.vue";
+import ReactPreparation from "../views/interviews/ReactPreparation.vue";
 import PracticeQuestionsPage from "../views/interviews/PracticeQuestionsPage.vue";
 import AllPracticeQuestions from "../views/interviews/AllPracticeQuestions.vue";
 import FrameworksLanguages from "../views/interviews/FrameworksLanguages.vue";
@@ -82,6 +86,56 @@ const routes = [
     component: PlaybookPage,
   },
   {
+    path: "/interviews/playbook/introduction",
+    name: "PlaybookIntroduction",
+    component: PlaybookIntroduction,
+  },
+  {
+    path: "/interviews/playbook/coding",
+    name: "PlaybookCoding",
+    component: () => import("../views/interviews/PlaybookCoding.vue"),
+  },
+  {
+    path: "/interviews/playbook/javascript",
+    name: "PlaybookJavaScript",
+    component: () => import("../views/interviews/PlaybookJavaScript.vue"),
+  },
+  {
+    path: "/interviews/playbook/algorithms",
+    name: "PlaybookAlgorithms",
+    component: () => import("../views/interviews/PlaybookAlgorithms.vue"),
+  },
+  {
+    path: "/interviews/playbook/user-interface",
+    name: "PlaybookUserInterface",
+    component: () => import("../views/interviews/PlaybookUserInterface.vue"),
+  },
+  {
+    path: "/interviews/playbook/ui-cheatsheet",
+    name: "PlaybookUICheatsheet",
+    component: () => import("../views/interviews/PlaybookUICheatsheet.vue"),
+  },
+  {
+    path: "/interviews/playbook/api-design",
+    name: "PlaybookAPIDesign",
+    component: () => import("../views/interviews/PlaybookAPIDesign.vue"),
+  },
+  {
+    path: "/interviews/playbook/system-design",
+    name: "PlaybookSystemDesign",
+    component: () => import("../views/interviews/PlaybookSystemDesign.vue"),
+  },
+  {
+    path: "/interviews/playbook/quiz",
+    name: "PlaybookQuiz",
+    component: () => import("../views/interviews/PlaybookQuiz.vue"),
+  },
+  {
+    path: "/interviews/playbook/resume",
+    name: "PlaybookResume",
+    component: () => import("../views/interviews/PlaybookResume.vue"),
+  },
+  {
     path: "/interviews/questions",
     name: "PracticeQuestions",
     component: AllPracticeQuestions,
@@ -107,14 +161,62 @@ const routes = [
     component: Blind75,
   },
   {
-    path: "/interviews/playbook/system-design",
+    path: "/interviews/system-design",
     name: "FrontendSystemDesign",
     component: FrontendSystemDesign,
+  },
+  {
+    path: "/interviews/system-design/introduction",
+    name: "SystemDesignIntroduction",
+    component: () => import("../views/interviews/SystemDesignIntroduction.vue"),
+  },
+  {
+    path: "/interviews/system-design/types-of-questions",
+    name: "SystemDesignTypesOfQuestions",
+    component: () =>
+      import("../views/interviews/SystemDesignTypesOfQuestions.vue"),
+  },
+  {
+    path: "/interviews/system-design/framework",
+    name: "SystemDesignFramework",
+    component: () => import("../views/interviews/SystemDesignFramework.vue"),
+  },
+  {
+    path: "/interviews/system-design/evaluation-axes",
+    name: "SystemDesignEvaluationAxes",
+    component: () =>
+      import("../views/interviews/SystemDesignEvaluationAxes.vue"),
+  },
+  {
+    path: "/interviews/system-design/common-mistakes",
+    name: "SystemDesignCommonMistakes",
+    component: () =>
+      import("../views/interviews/SystemDesignCommonMistakes.vue"),
+  },
+  {
+    path: "/interviews/system-design/cheatsheet",
+    name: "SystemDesignCheatsheet",
+    component: () => import("../views/interviews/SystemDesignCheatsheet.vue"),
   },
   {
     path: "/interviews/playbook/react",
     name: "ReactPlaybook",
     component: ReactPlaybook,
+  },
+  {
+    path: "/interviews/playbook/react/introduction",
+    name: "ReactIntroduction",
+    component: ReactIntroduction,
+  },
+  {
+    path: "/interviews/playbook/react/landscape",
+    name: "ReactLandscape",
+    component: ReactLandscape,
+  },
+  {
+    path: "/interviews/playbook/react/preparation",
+    name: "ReactPreparation",
+    component: ReactPreparation,
   },
   {
     path: "/interviews/playbook/behavioral",

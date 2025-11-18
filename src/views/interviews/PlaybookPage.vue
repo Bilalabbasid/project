@@ -11,7 +11,11 @@
           <div class="container">
             <div class="header-content">
               <h1>Front End Interview Playbook</h1>
-              <p>The definitive guide to front end interviews. From algorithms to system design, we cover everything you need to know to land your dream job.</p>
+              <p>
+                The definitive guide to front end interviews. From algorithms to
+                system design, we cover everything you need to know to land your
+                dream job.
+              </p>
 
               <div class="header-features">
                 <div class="feature-item">
@@ -29,7 +33,12 @@
               </div>
 
               <div class="header-description">
-                <p>Tackle your next interview with confidence using this focused, no-nonsense front end prep guide. Created by the author of the Front End Interview Handbook, it's filled with practical strategies and insider tips you won't find anywhere else.</p>
+                <p>
+                  Tackle your next interview with confidence using this focused,
+                  no-nonsense front end prep guide. Created by the author of the
+                  Front End Interview Handbook, it's filled with practical
+                  strategies and insider tips you won't find anywhere else.
+                </p>
               </div>
             </div>
           </div>
@@ -44,21 +53,29 @@
                 <h2>Introduction</h2>
                 <div class="section-meta">
                   <span class="article-count">1 article</span>
-                  <span class="reading-time">Reading time 10 minutes total</span>
+                  <span class="reading-time"
+                    >Reading time 10 minutes total</span
+                  >
                 </div>
               </div>
               <div class="articles-list">
-                <article class="article-card">
+                <router-link
+                  to="/interviews/playbook/introduction"
+                  class="article-card"
+                >
                   <div class="article-number">1</div>
                   <div class="article-content">
                     <h3>Front End Interviews: An Introduction</h3>
-                    <p>Everything you need to know - from types of questions to preparation tactics</p>
+                    <p>
+                      Everything you need to know - from types of questions to
+                      preparation tactics
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">10 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
+                </router-link>
               </div>
             </div>
 
@@ -68,43 +85,63 @@
                 <h2>Coding interviews</h2>
                 <div class="section-meta">
                   <span class="article-count">3 articles</span>
-                  <span class="reading-time">Reading time 21 minutes total</span>
+                  <span class="reading-time"
+                    >Reading time 24 minutes total</span
+                  >
                 </div>
               </div>
               <div class="articles-list">
-                <article class="article-card">
+                <router-link
+                  to="/interviews/playbook/coding"
+                  class="article-card"
+                >
                   <div class="article-number">2</div>
                   <div class="article-content">
                     <h3>Front End Coding Interviews</h3>
-                    <p>Question types to expect, handy coding tips and the best resources to use</p>
+                    <p>
+                      Question types to expect, handy coding tips and the best
+                      resources to use
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">7 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
-                <article class="article-card">
+                </router-link>
+                <router-link
+                  to="/interviews/playbook/javascript"
+                  class="article-card"
+                >
                   <div class="article-number">3</div>
                   <div class="article-content">
                     <h3>JavaScript Coding Interviews</h3>
-                    <p>Question types to expect, important concepts to know and top practice questions to do</p>
+                    <p>
+                      Question types to expect, important concepts to know and
+                      top practice questions to do
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">8 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
-                <article class="article-card">
+                </router-link>
+                <router-link
+                  to="/interviews/playbook/algorithms"
+                  class="article-card"
+                >
                   <div class="article-number">4</div>
                   <div class="article-content">
                     <h3>Data Structures and Algorithms Interviews</h3>
-                    <p>Front end engineer's guide to DSA - important concepts to know, top practice questions to do and other tips</p>
+                    <p>
+                      Front end engineer's guide to DSA - important concepts to
+                      know, top practice questions to do and other tips
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">6 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
+                </router-link>
               </div>
             </div>
 
@@ -114,43 +151,64 @@
                 <h2>User interface interviews</h2>
                 <div class="section-meta">
                   <span class="article-count">3 articles</span>
-                  <span class="reading-time">Reading time 34 minutes total</span>
+                  <span class="reading-time"
+                    >Reading time 34 minutes total</span
+                  >
                 </div>
               </div>
               <div class="articles-list">
-                <article class="article-card">
+                <router-link
+                  to="/interviews/playbook/user-interface"
+                  class="article-card"
+                >
                   <div class="article-number">5</div>
                   <div class="article-content">
                     <h3>User Interface Coding Interviews</h3>
-                    <p>Best practices while interviewing, important concepts to know and critical practice questions to do</p>
+                    <p>
+                      Best practices while interviewing, important concepts to
+                      know and critical practice questions to do
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">12 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
-                <article class="article-card">
+                </router-link>
+                <router-link
+                  to="/interviews/playbook/ui-cheatsheet"
+                  class="article-card"
+                >
                   <div class="article-number">6</div>
                   <div class="article-content">
                     <h3>Cheatsheet for UI Interview Questions</h3>
-                    <p>A cheatsheet you can use to improve the user interfaces you have to build or design during front end interviews</p>
+                    <p>
+                      A cheatsheet you can use to improve the user interfaces
+                      you have to build or design during front end interviews
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">15 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
-                <article class="article-card">
+                </router-link>
+                <router-link
+                  to="/interviews/playbook/api-design"
+                  class="article-card"
+                >
                   <div class="article-number">7</div>
                   <div class="article-content">
                     <h3>API design principles for UI components</h3>
-                    <p>Best practices for designing developer interface components APIs, useful for UI components coding and system design interviews</p>
+                    <p>
+                      Best practices for designing developer interface
+                      components APIs, useful for UI components coding and
+                      system design interviews
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">7 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
+                </router-link>
               </div>
             </div>
 
@@ -164,17 +222,23 @@
                 </div>
               </div>
               <div class="articles-list">
-                <article class="article-card">
+                <router-link
+                  to="/interviews/playbook/system-design"
+                  class="article-card"
+                >
                   <div class="article-number">8</div>
                   <div class="article-content">
                     <h3>Front End System Design Interviews - Quick Start</h3>
-                    <p>A quick overview to all the best resources you can leverage for your front end system design interviews</p>
+                    <p>
+                      A quick overview to all the best resources you can
+                      leverage for your front end system design interviews
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">2 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
+                </router-link>
               </div>
             </div>
 
@@ -188,17 +252,23 @@
                 </div>
               </div>
               <div class="articles-list">
-                <article class="article-card">
+                <router-link
+                  to="/interviews/playbook/quiz"
+                  class="article-card"
+                >
                   <div class="article-number">9</div>
                   <div class="article-content">
                     <h3>Front End Quiz Interview Questions</h3>
-                    <p>Quiz-style front end interview questions — What to expect, concepts to learn, and 100+ important practice questions</p>
+                    <p>
+                      Quiz-style front end interview questions — What to expect,
+                      concepts to learn, and 100+ important practice questions
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">4 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
+                </router-link>
               </div>
             </div>
 
@@ -212,17 +282,23 @@
                 </div>
               </div>
               <div class="articles-list">
-                <article class="article-card">
+                <router-link
+                  to="/interviews/playbook/resume"
+                  class="article-card"
+                >
                   <div class="article-number">10</div>
                   <div class="article-content">
                     <h3>Ultimate Guide to Front End Engineer Resumes</h3>
-                    <p>Get writing tips, samples, and best practices to help you get shortlisted for your next front end job</p>
+                    <p>
+                      Get writing tips, samples, and best practices to help you
+                      get shortlisted for your next front end job
+                    </p>
                     <div class="article-meta">
                       <span class="reading-time">7 min read</span>
                     </div>
                   </div>
                   <div class="article-arrow">→</div>
-                </article>
+                </router-link>
               </div>
             </div>
           </div>
@@ -230,8 +306,9 @@
       </div>
     </div>
   </div>
-</template><script setup>
-import InterviewSidebar from '../../components/InterviewSidebar.vue'
+</template>
+<script setup>
+import InterviewSidebar from "../../components/InterviewSidebar.vue";
 
 // No reactive data needed for this static playbook page
 </script>
@@ -365,6 +442,8 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
   border-radius: 12px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .article-card:hover {

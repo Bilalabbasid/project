@@ -8,10 +8,22 @@
           </router-link>
         </li>
         <li class="dropdown">
-          <button class="sidebar-link dropdown-trigger" @click="togglePracticeDropdown">
+          <button
+            class="sidebar-link dropdown-trigger"
+            @click="togglePracticeDropdown"
+          >
             Practice questions
-            <svg class="dropdown-arrow" :class="{ 'rotated': practiceDropdownOpen }" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            <svg
+              class="dropdown-arrow"
+              :class="{ rotated: practiceDropdownOpen }"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
             </svg>
           </button>
           <ul v-show="practiceDropdownOpen" class="dropdown-menu">
@@ -21,22 +33,40 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/questions/frameworks" class="dropdown-item">
+              <router-link
+                to="/interviews/questions/frameworks"
+                class="dropdown-item"
+              >
                 Frameworks/languages
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/questions/formats" class="dropdown-item">
+              <router-link
+                to="/interviews/questions/formats"
+                class="dropdown-item"
+              >
                 Question formats
               </router-link>
             </li>
           </ul>
         </li>
         <li class="dropdown">
-          <button class="sidebar-link dropdown-trigger" @click="toggleStrategyDropdown">
+          <button
+            class="sidebar-link dropdown-trigger"
+            @click="toggleStrategyDropdown"
+          >
             Recommended strategy
-            <svg class="dropdown-arrow" :class="{ 'rotated': strategyDropdownOpen }" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            <svg
+              class="dropdown-arrow"
+              :class="{ rotated: strategyDropdownOpen }"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
             </svg>
           </button>
           <ul v-show="strategyDropdownOpen" class="dropdown-menu">
@@ -46,56 +76,107 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/playbook/gfe75" class="dropdown-item">
+              <router-link
+                to="/interviews/playbook/gfe75"
+                class="dropdown-item"
+              >
                 GFE 75
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/playbook/blind75" class="dropdown-item">
+              <router-link
+                to="/interviews/playbook/blind75"
+                class="dropdown-item"
+              >
                 Blind 75
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/playbook/system-design" class="dropdown-item">
+              <router-link to="/interviews/system-design" class="dropdown-item">
                 Frontend System Design Playbook
               </router-link>
             </li>
           </ul>
         </li>
         <li class="dropdown">
-          <button class="sidebar-link dropdown-trigger" @click="toggleTimeSaveDropdown">
+          <button
+            class="sidebar-link dropdown-trigger"
+            @click="toggleTimeSaveDropdown"
+          >
             Time-savers
-            <svg class="dropdown-arrow" :class="{ 'rotated': timeSaveDropdownOpen }" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            <svg
+              class="dropdown-arrow"
+              :class="{ rotated: timeSaveDropdownOpen }"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
             </svg>
           </button>
           <ul v-show="timeSaveDropdownOpen" class="dropdown-menu">
             <li>
-              <router-link to="/interviews/study-plans" class="dropdown-item locked-item">
+              <router-link
+                to="/interviews/study-plans"
+                class="dropdown-item locked-item"
+              >
                 Study plan
                 <div class="lock-container">
-                  <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <svg
+                    class="lock-icon"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                      clip-rule="evenodd"
+                    />
                   </svg>
                 </div>
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/company" class="dropdown-item locked-item">
+              <router-link
+                to="/interviews/company"
+                class="dropdown-item locked-item"
+              >
                 Company guides
                 <div class="lock-container">
-                  <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <svg
+                    class="lock-icon"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                      clip-rule="evenodd"
+                    />
                   </svg>
                 </div>
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/focus-areas" class="dropdown-item locked-item">
+              <router-link
+                to="/interviews/focus-areas"
+                class="dropdown-item locked-item"
+              >
                 Focus areas
                 <div class="lock-container">
-                  <svg class="lock-icon" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                  <svg
+                    class="lock-icon"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                      clip-rule="evenodd"
+                    />
                   </svg>
                 </div>
               </router-link>
@@ -103,10 +184,22 @@
           </ul>
         </li>
         <li class="dropdown">
-          <button class="sidebar-link dropdown-trigger" @click="toggleGuidesDropdown">
+          <button
+            class="sidebar-link dropdown-trigger"
+            @click="toggleGuidesDropdown"
+          >
             Guides
-            <svg class="dropdown-arrow" :class="{ 'rotated': guidesDropdownOpen }" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            <svg
+              class="dropdown-arrow"
+              :class="{ rotated: guidesDropdownOpen }"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              />
             </svg>
           </button>
           <ul v-show="guidesDropdownOpen" class="dropdown-menu">
@@ -116,17 +209,23 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/playbook/system-design" class="dropdown-item">
+              <router-link to="/interviews/system-design" class="dropdown-item">
                 Front End System Design Playbook
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/playbook/react" class="dropdown-item">
+              <router-link
+                to="/interviews/playbook/react"
+                class="dropdown-item"
+              >
                 React Interview Playbook
               </router-link>
             </li>
             <li>
-              <router-link to="/interviews/playbook/behavioral" class="dropdown-item">
+              <router-link
+                to="/interviews/playbook/behavioral"
+                class="dropdown-item"
+              >
                 Behavioral Interview Playbook
               </router-link>
             </li>
@@ -138,72 +237,78 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, computed, watch } from "vue";
+import { useRoute } from "vue-router";
 
-const route = useRoute()
+const route = useRoute();
 
-const practiceDropdownOpen = ref(false)
-const strategyDropdownOpen = ref(false)
-const timeSaveDropdownOpen = ref(false)
-const guidesDropdownOpen = ref(false)
+const practiceDropdownOpen = ref(false);
+const strategyDropdownOpen = ref(false);
+const timeSaveDropdownOpen = ref(false);
+const guidesDropdownOpen = ref(false);
 
 // Check if current route is in practice questions section
 const isPracticeRoute = computed(() => {
-  return route.path.startsWith('/interviews/questions')
-})
+  return route.path.startsWith("/interviews/questions");
+});
 
 // Check if current route is in strategy/playbook section
 const isStrategyRoute = computed(() => {
   const strategyPaths = [
-    '/interviews/playbook/gfe75',
-    '/interviews/playbook/blind75'
-  ]
-  return strategyPaths.includes(route.path)
-})
+    "/interviews/playbook/gfe75",
+    "/interviews/playbook/blind75",
+  ];
+  return strategyPaths.includes(route.path);
+});
 
 // Check if current route is in time-save section
 const isTimeSaveRoute = computed(() => {
-  return route.path.startsWith('/interviews/study-plans') ||
-         route.path.startsWith('/interviews/company') ||
-         route.path.startsWith('/interviews/focus-areas')
-})
+  return (
+    route.path.startsWith("/interviews/study-plans") ||
+    route.path.startsWith("/interviews/company") ||
+    route.path.startsWith("/interviews/focus-areas")
+  );
+});
 
 // Check if current route is in guides section
 const isGuidesRoute = computed(() => {
   const guidesPaths = [
-    '/interviews/playbook',
-    '/interviews/playbook/system-design',
-    '/interviews/playbook/react',
-    '/interviews/playbook/behavioral',
-    '/interviews/guides'
-  ]
-  return guidesPaths.includes(route.path)
-})
+    "/interviews/playbook",
+    "/interviews/system-design",
+    "/interviews/playbook/react",
+    "/interviews/playbook/behavioral",
+    "/interviews/guides",
+  ];
+  return guidesPaths.includes(route.path);
+});
 
 // Auto-open dropdowns based on current route
-watch([isPracticeRoute, isStrategyRoute, isTimeSaveRoute, isGuidesRoute], ([practice, strategy, timeSave, guides]) => {
-  practiceDropdownOpen.value = practice
-  strategyDropdownOpen.value = strategy
-  timeSaveDropdownOpen.value = timeSave
-  guidesDropdownOpen.value = guides
-}, { immediate: true })
+watch(
+  [isPracticeRoute, isStrategyRoute, isTimeSaveRoute, isGuidesRoute],
+  ([practice, strategy, timeSave, guides]) => {
+    practiceDropdownOpen.value = practice;
+    strategyDropdownOpen.value = strategy;
+    timeSaveDropdownOpen.value = timeSave;
+    guidesDropdownOpen.value = guides;
+  },
+  { immediate: true }
+);
 
 const togglePracticeDropdown = () => {
-  practiceDropdownOpen.value = !practiceDropdownOpen.value
-}
+  practiceDropdownOpen.value = !practiceDropdownOpen.value;
+};
 
 const toggleStrategyDropdown = () => {
-  strategyDropdownOpen.value = !strategyDropdownOpen.value
-}
+  strategyDropdownOpen.value = !strategyDropdownOpen.value;
+};
 
 const toggleTimeSaveDropdown = () => {
-  timeSaveDropdownOpen.value = !timeSaveDropdownOpen.value
-}
+  timeSaveDropdownOpen.value = !timeSaveDropdownOpen.value;
+};
 
 const toggleGuidesDropdown = () => {
-  guidesDropdownOpen.value = !guidesDropdownOpen.value
-}
+  guidesDropdownOpen.value = !guidesDropdownOpen.value;
+};
 </script>
 
 <style scoped>
