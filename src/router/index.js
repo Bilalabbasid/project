@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import memberstack from "@memberstack/dom";
 
 // Core Views
 import LandingPage from "../views/core/LandingPageNew.vue";
@@ -74,17 +73,17 @@ const routes = [
   {
     path: "/interviews",
     name: "InterviewHome",
-    component: InterviewHome,
-  },
-  {
-    path: "/interviews/get-started",
-    name: "InterviewGetStarted",
-    component: InterviewHome, // Using InterviewHome for now, can be changed to a specific component
+    component: () => import("../views/interviews/InterviewDashboard.vue"),
   },
   {
     path: "/interviews/dashboard",
     name: "InterviewDashboard",
-    component: InterviewHome, // Using InterviewHome for now, can be changed to a specific dashboard component
+    component: () => import("../views/interviews/InterviewDashboard.vue"),
+  },
+  {
+    path: "/interviews/get-started",
+    name: "InterviewGetStarted",
+    component: InterviewHome,
   },
   {
     path: "/interviews/playbook",
@@ -389,15 +388,22 @@ const router = createRouter({
 // Route guards
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    try {
-      const member = await memberstack.getCurrentMember();
-      if (member.data) {
-        next();
-      } else {
+    // Check if Memberstack is loaded
+    if (window.memberstack && window.memberstack.onReady) {
+      try {
+        const member = await window.memberstack.onReady;
+        if (member && member.loggedIn) {
+          next();
+        } else {
+          next("/login");
+        }
+      } catch (error) {
+        console.error("Memberstack auth check failed:", error);
         next("/login");
       }
-    } catch (error) {
-      next("/login");
+    } else {
+      // Memberstack not loaded yet, allow navigation
+      next();
     }
   } else {
     next();

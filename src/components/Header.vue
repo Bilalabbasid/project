@@ -6,25 +6,43 @@ const router = useRouter();
 const isLoggedIn = ref(false);
 const user = ref(null);
 
-// Mock user for demonstration
+// Check Memberstack authentication status
 onMounted(() => {
-  // In a real app, check authentication status
-  isLoggedIn.value = false; // Set to false to show auth dropdown
-  if (isLoggedIn.value) {
-    user.value = {
-      name: "User",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
-    };
+  if (window.memberstack && window.memberstack.onReady) {
+    window.memberstack.onReady
+      .then((member) => {
+        if (member && member.loggedIn) {
+          isLoggedIn.value = true;
+          user.value = {
+            name: member.data?.name || "User",
+            email: member.data?.email,
+            avatar:
+              member.data?.avatar ||
+              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+          };
+        } else {
+          isLoggedIn.value = false;
+          user.value = {
+            name: "Guest",
+            avatar:
+              "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
+          };
+        }
+      })
+      .catch((error) => {
+        console.error("Memberstack auth check failed:", error);
+        isLoggedIn.value = false;
+      });
   } else {
-    user.value = {
-      name: "Guest",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face",
-    };
+    // Memberstack not loaded yet
+    isLoggedIn.value = false;
   }
 });
 
 const logout = () => {
+  if (window.memberstack && window.memberstack.logout) {
+    window.memberstack.logout();
+  }
   isLoggedIn.value = false;
   user.value = null;
   router.push("/");
@@ -62,7 +80,12 @@ const logout = () => {
               </svg>
             </button>
             <div class="dropdown-menu">
-              <button @click="router.push('/interviews/get-started')" class="dropdown-item">Techmade | Interviews</button>
+              <button
+                @click="router.push('/interviews/dashboard')"
+                class="dropdown-item"
+              >
+                Techmade | Interviews
+              </button>
               <router-link to="/interviews/questions" class="dropdown-item"
                 >Practice Questions</router-link
               >

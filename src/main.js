@@ -1,16 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import memberstackDOM from "@memberstack/dom";
 
-// Initialize Memberstack
-import memberstack from '@memberstack/dom'
+// Memberstack is loaded via script tag in index.html
+// No need to initialize it here
 
-memberstack.init({
-  publicKey: 'pk_5e8b63f46c1e4f2d8a1b2c3d4e5f6789' // Replace with your actual Memberstack public key
-})
+const app = createApp(App);
 
-const app = createApp(App)
+app.use(router);
 
-app.use(router)
-
-app.mount('#app')
+app.mount("#app");

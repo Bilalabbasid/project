@@ -4,45 +4,53 @@
       <div class="auth-card">
         <div class="auth-header">
           <h2>Create Your Account</h2>
-          <p>Join thousands of developers and start your learning journey today.</p>
+          <p>
+            Join thousands of developers and start your learning journey today.
+          </p>
         </div>
-        
-        <form data-ms-form="signup" @submit.prevent="handleSubmit" class="auth-form">
+
+        <form @submit.prevent="handleSubmit" class="auth-form">
           <div class="form-group">
             <label for="email">Email</label>
-            <input 
-              type="email" 
-              id="email" 
-              v-model="email" 
-              required 
+            <input
+              type="email"
+              id="email"
+              v-model="email"
+              required
               placeholder="you@example.com"
             />
           </div>
-          
+
           <div class="form-group">
             <label for="password">Password</label>
-            <input 
-              type="password" 
-              id="password" 
-              v-model="password" 
-              required 
+            <input
+              type="password"
+              id="password"
+              v-model="password"
+              required
               placeholder="At least 8 characters"
             />
           </div>
-          
-          <button type="submit" class="btn auth-button">
-            Create Account
-          </button>
+
+          <button type="submit" class="btn auth-button">Create Account</button>
+
+          <div
+            v-if="error"
+            class="error-message"
+            style="color: #ef4444; margin-top: 8px; text-align: center"
+          >
+            {{ error }}
+          </div>
         </form>
-        
+
         <div class="auth-footer">
           <p>
-            Already have an account? 
+            Already have an account?
             <router-link to="/login" class="auth-link">Log In</router-link>
           </p>
           <p class="terms">
-            By signing up, you agree to our 
-            <a href="#terms" class="auth-link">Terms of Service</a> and 
+            By signing up, you agree to our
+            <a href="#terms" class="auth-link">Terms of Service</a> and
             <a href="#privacy" class="auth-link">Privacy Policy</a>.
           </p>
         </div>
@@ -52,17 +60,59 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
+import memberstackDOM from "@memberstack/dom";
+import { useToast } from "@/composables/useToast";
 
-const email = ref('')
-const password = ref('')
+const router = useRouter();
+const { showToast } = useToast();
+const email = ref("");
+const password = ref("");
+const error = ref("");
+let memberstack;
 
-const handleSubmit = () => {
-  // Memberstack handles the form submission via the data-ms-form attribute.
-  // This function is here to demonstrate the use of the Composition API.
-  // In a real application, you might add client-side validation here.
-  console.log('Form submitted with:', email.value, password.value)
-}
+onMounted(async () => {
+  try {
+    memberstack = await memberstackDOM.init({
+      publicKey: import.meta.env.VITE_MEMBERSTACK_PUBLIC_KEY,
+      useCookies: true,
+    });
+  } catch (err) {
+    console.error("Memberstack initialization failed:", err);
+  }
+});
+
+const handleSubmit = async () => {
+  error.value = "";
+
+  if (!email.value || !password.value) {
+    error.value = "Please fill in all fields";
+    return;
+  }
+
+  if (password.value.length < 8) {
+    error.value = "Password must be at least 8 characters";
+    return;
+  }
+
+  try {
+    const member = await memberstack.signupMemberEmailPassword({
+      email: email.value,
+      password: password.value,
+    });
+
+    console.log("Signup successful!", member);
+    showToast("Account created successfully! Welcome aboard.", "success");
+
+    // Redirect to dashboard
+    router.push("/dashboard");
+  } catch (err) {
+    console.error("Signup failed:", err);
+    error.value = err.message || "Signup failed. Please try again.";
+    showToast("Signup failed. Please try again.", "error");
+  }
+};
 </script>
 
 <style scoped>

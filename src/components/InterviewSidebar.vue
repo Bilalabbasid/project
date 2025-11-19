@@ -3,6 +3,11 @@
     <nav class="sidebar-nav">
       <ul>
         <li>
+          <router-link to="/interviews/dashboard" class="sidebar-link">
+            Dashboard
+          </router-link>
+        </li>
+        <li>
           <router-link to="/interviews/get-started" class="sidebar-link">
             Get started
           </router-link>
