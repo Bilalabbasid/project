@@ -105,8 +105,11 @@ const handleSubmit = async () => {
     console.log("Signup successful!", member);
     showToast("Account created successfully! Welcome aboard.", "success");
 
-    // Redirect to dashboard
-    router.push("/dashboard");
+    // Save login status to localStorage
+    localStorage.setItem("isLoggedIn", "true");
+
+    // Redirect to interviews section (will be handled by router guard)
+    router.push("/interviews");
   } catch (err) {
     console.error("Signup failed:", err);
     error.value = err.message || "Signup failed. Please try again.";

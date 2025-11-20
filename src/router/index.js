@@ -8,6 +8,7 @@ import PricingPage from "../views/core/PricingPage.vue";
 import LoginPage from "../views/auth/LoginPage.vue";
 import SignupPage from "../views/auth/SignupPage.vue";
 import AccountPage from "../views/auth/AccountPage.vue";
+import LogoutPage from "../views/auth/LogoutPage.vue";
 
 // Interview Views
 import InterviewHome from "../views/interviews/InterviewHome.vue";
@@ -64,6 +65,11 @@ const routes = [
     component: SignupPage,
   },
   {
+    path: "/logout",
+    name: "Logout",
+    component: LogoutPage,
+  },
+  {
     path: "/account",
     name: "Account",
     component: AccountPage,
@@ -73,12 +79,13 @@ const routes = [
   {
     path: "/interviews",
     name: "InterviewHome",
-    component: () => import("../views/interviews/InterviewDashboard.vue"),
+    component: InterviewHome,
   },
   {
     path: "/interviews/dashboard",
     name: "InterviewDashboard",
     component: () => import("../views/interviews/InterviewDashboard.vue"),
+    meta: { requiresAuth: true },
   },
   {
     path: "/interviews/get-started",
@@ -388,21 +395,32 @@ const router = createRouter({
 // Route guards
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
-    // Check if Memberstack is loaded
+    // Check localStorage first for faster response
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+    if (!isLoggedIn) {
+      next("/login");
+      return;
+    }
+
+    // Then verify with Memberstack if available
     if (window.memberstack && window.memberstack.onReady) {
       try {
         const member = await window.memberstack.onReady;
         if (member && member.loggedIn) {
           next();
         } else {
+          // Clear localStorage if Memberstack says not logged in
+          localStorage.removeItem("isLoggedIn");
           next("/login");
         }
       } catch (error) {
         console.error("Memberstack auth check failed:", error);
-        next("/login");
+        // If Memberstack fails but localStorage says logged in, allow it
+        next();
       }
     } else {
-      // Memberstack not loaded yet, allow navigation
+      // Memberstack not loaded yet, rely on localStorage
       next();
     }
   } else {

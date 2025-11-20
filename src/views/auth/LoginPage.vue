@@ -135,8 +135,11 @@ const handleSubmit = async () => {
       showToast("Account created successfully! Welcome aboard.", "success");
     }
 
-    // Redirect after successful auth
-    router.push("/dashboard");
+    // Save login status to localStorage
+    localStorage.setItem("isLoggedIn", "true");
+
+    // Redirect to interviews section (will be handled by router guard)
+    router.push("/interviews");
   } catch (err) {
     console.error("Authentication failed:", err);
     error.value = err.message || "Authentication failed. Please try again.";
