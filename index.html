@@ -20,6 +20,11 @@
 
   <body>
     <div id="app"></div>
+    <!-- Memberstack DOM script (public key injected by Vite html transform) -->
+    <script
+      async
+      src="https://cdn.memberstack.com/js/v1/memberstack.js?publicKey=%VITE_MEMBERSTACK_PUBLIC_KEY%"
+    ></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

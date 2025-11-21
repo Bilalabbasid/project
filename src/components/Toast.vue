@@ -98,11 +98,16 @@ const props = defineProps({
     type: Number,
     default: 3000,
   },
+  onClose: {
+    type: Function,
+    default: () => {},
+  },
 });
 
 const isVisible = ref(true);
 
 const close = () => {
+  props.onClose();
   isVisible.value = false;
 };
 
@@ -118,7 +123,7 @@ onMounted(() => {
   position: fixed;
   top: 24px;
   right: 24px;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .toast {
@@ -138,13 +143,13 @@ onMounted(() => {
 .toast.success {
   background: #deef79;
   color: #1f2937;
-  border-color: none
+  border-color: none;
 }
 
 .toast.error {
-  background: #18181b;
-  color: #ffffff;
-  border: none;
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #fca5a5;
 }
 
 .toast.info {
@@ -174,7 +179,7 @@ onMounted(() => {
 }
 
 .toast.error .toast-icon {
-  color: #ef4444;
+  color: #dc2626;
 }
 
 .toast.info .toast-icon {
