@@ -245,7 +245,7 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 }
 
 .study-plan-card {
-  background: #1f2937;
+  background: #1b1b1e;
   border-radius: 12px;
   padding: 24px;
   border: 1px solid #374151;
@@ -355,7 +355,7 @@ import InterviewSidebar from '../../components/InterviewSidebar.vue'
 }
 
 .testimonial-card {
-  background: #1f2937;
+  background: #1b1b1e;
   border-radius: 12px;
   padding: 32px;
   border: 1px solid #374151;

@@ -119,21 +119,6 @@
           >
             {{ plan.type === "FREE" ? "Get Started Free" : "Get Started" }}
           </button>
-
-          <button
-            type="button"
-            class="btn"
-            style="
-              background: transparent;
-              border: 1px solid #374151;
-              color: #cbd5e1;
-              padding: 8px;
-            "
-            @click.prevent="inspectPlan(plan)"
-            title="Fetch full plan from Memberstack for debugging"
-          >
-            Inspect plan
-          </button>
         </div>
       </div>
     </div>
@@ -187,23 +172,6 @@ onMounted(async () => {
   }
 });
 
-// Debug helper: fetch full plan from Memberstack and show response
-const inspectPlan = async (plan) => {
-  try {
-    if (!memberstack) {
-      console.warn("Memberstack not ready for inspectPlan");
-      return;
-    }
-    console.log("Calling memberstack.getPlan for:", plan.id);
-    const full = await memberstack.getPlan({ planId: plan.id });
-    console.log("memberstack.getPlan response:", full);
-    debugOutput.value = { inspect: full };
-    return full;
-  } catch (e) {
-    console.error("inspectPlan failed:", e);
-    debugOutput.value = { inspectError: e };
-  }
-};
 
 // Helper: DOM fallback that programmatically clicks a temp element with Memberstack attributes
 const triggerDomCheckout = (priceId) => {
